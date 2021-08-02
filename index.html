@@ -1,0 +1,287 @@
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link href="https://static.helpsystems.com/cobalt-strike/css/mburger.css" rel="stylesheet">
+    <link href="https://static.helpsystems.com/cobalt-strike/css/mhead.css" rel="stylesheet">
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+
+
+    <title>Cobalt Strike Community Kit</title>
+</head>
+
+<body>
+
+   
+
+            
+
+    <div>
+
+        <nav class="navbar navbar-expand-md shadow-sm bg-white mh-head" id="my-header">
+            <div class="container"> 
+                <a class="navbar-brand" href="/"> 
+                    <img src="https://static.helpsystems.com/cobalt-strike/img/cobaltstrike-logo-header.png" class="img-fluid" alt="Cobalt Strike"/>
+                </a>
+                
+                <div class="collapse navbar-collapse flex-column" id="my-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"> <a class="nav-link text-nowrap " href="https://cobaltstrike.com">cobaltstrike.com</a> </li>
+
+                        <li class="nav-item"> <a class="nav-link text-nowrap " href="https://cobaltstrike.com/contact">Contact Us</a> </li>
+                        <li class="nav-item"> <a class="nav-link text-nowrap " href="https://github.com/cobalt-strike"><i class="fab fa-github fa-lg"></i></a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.helpsystems.com" target="_blank">
+                                <img src="https://static.helpsystems.com/cobalt-strike/img/helpsystems-icon-blue-grey.png" class="img-fluid d-none d-md-inline-block" alt="HelpSystems"/>
+                                <span class="d-inline-block d-md-none"> HelpSystems</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </div>
+
+
+
+
+
+        <div class="container">
+
+            <p class="lead">
+                <h1 class="display-3">Community Kit</h1>
+                <a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several amazing tools and scripts have been written and published, but they can be difficult to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this amazing work.  
+            </p>
+
+            <!-- Guidance Buttons -->
+            <div class="row">
+                <div class="p-2">
+                    <!-- Guidance Button trigger modal -->
+                    <button type="button" class="btn btn-Success" data-toggle="modal" data-target="#guidanceModal">
+                    How to Contribute to Community Kit
+                    </button>
+
+                    <!-- Guidance Modal -->
+                    <div class="modal fade" id="guidanceModal" tabindex="-1" role="dialog" aria-labelledby="guidanceModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">
+                                Contribution Guidance</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <p>The Community Kit list of projects is maintained on <a href="https://github.com/Cobalt-Strike/community-kit"><i class="fab fa-github fa-lg"></i></a>.</p>
+                                <p>If you'd like to contribute or make suggestions to how this resource could be improved, contact the Cobalt Strike team using this form.</p>
+
+                                <p>Follow this guidance if you'd like your suggestion to be considered.</p>
+
+                                <ul>
+                                    <li>Submit a request via <a href="mailto:cobalt.custops@helpsystems.com">support</a>.</li>
+                                    <li>Direct pull requests will not be accepted.</li>
+                                    <li>Requests will only be accepted from current license holders.</li>
+                                    <li>Requests must have a license that does not restrict distribution</li>
+                                    <li>Requests must be built on the Cobalt Strike framework (Aggressor script, BOF, Malleable C2, etc.) Other tools (i.e., C# projects) are great, but Community Kit is not a general tool tracker.</li>
+                                    <li>Requests with a defined purpose are given higher consideration then a collection of miscellaneous files.</li>
+                                    <li>Requests should have a description and README that clearly describes the project and how to use it.</li>
+                                    <li>Requests with pre-compiled binaries will be marked with a warning label.</li>
+
+                                    <li><strong>Include the following with your request.</strong>
+                                        <ul>
+                                            <li>Name</li>
+                                            <li>Email</li>
+                                            <li>Twitter Handle (optional)</li>
+                                            <li>Request</li>
+                                            <li>Links to request project(s)</li>
+                                        </ul>
+                                    </li>
+
+                                    <li><strong>Do NOT include the following with your request.</strong>
+                                        <ul>
+                                            <li>Files or attachments</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            
+                <div class="p-2">
+                    <!-- Disclaimer Button trigger modal -->
+                    <button type="button" class="btn btn-Warning" data-toggle="modal" data-target="#disclaimerModal">
+                    Disclaimer
+                    </button>
+
+                    <!-- Disclaimer Modal -->
+                    <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">
+                                Disclaimer of Endorcement</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by HelpSystems of any of the products, services or opinions of the corporation or organization or individual. HelpSystems bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+
+
+            <hr/>
+        <div class="container" id="cckitContent">
+
+            <h3>Legend</h3>
+                
+            <p><i class="fas fa-star fa-lg"></i> indicates update in the last 30 days.</p>
+            <p><i class="fas fa-exclamation-triangle"></i> indicates the project has precompiled binaries</p>
+            <hr/>
+
+            <table id="cckit_table" class="display stripe" style="width:100%">
+                <thead>
+                    <tr>
+                        <th data-toggle="tooltip" data-placement="top" title="Date the project was last updated">Last Update</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Category of the project">Category</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Primary owner of the project">Owner</th>
+                        <th></th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project name">Name</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project description">Description</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Latest Commit Message">Commit Message</th>
+                        <th data-toggle="tooltip" data-placement="top" title="GitHub stars are used to highlight popularity">GitHub Stars</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Warning. The project contains pre-compiled binaries. Consider compiling before use.">Has Binary</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project link">URL</th>
+
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <th>Last Update</th>
+                        <th>Category</th>
+                        <th>Owner</th>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Latest Commit Message</th>
+                        <th>GitHub Stars</th>
+                        <th>Has Binary</th>
+                        <th>URL</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+            <footer class="bg-footer-1">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <a href="https://www.coresecurity.com" target="_blank" class="text-decoration-none">
+                                <img src="https://static.helpsystems.com/cobalt-strike/img/coresecurity.png" class="img-fluid mr-3 mb-2" alt="CoreSecurity Logo"/>
+                            </a>
+        
+                            <a href="https://www.cobaltstrike.com" target="_blank" class="text-decoration-none">
+                                <img src="https://static.helpsystems.com/cobalt-strike/img/cobaltstrike.png" class="img-fluid mb-2" alt="Cobalt Strike Logo"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="small mb-1">
+                                Copyright &copy; 2021 HelpSystems. All rights reserved. |
+                                <a href="https://cobaltstrike.com/help-corp-compliance-ethics">Corporate Compliance &amp; Ethics</a> |
+                                <a href="https://www.helpsystems.com/impressum">Impressum</a> |
+                                <a href="https://www.helpsystems.com/privacy-policy" target="_blank">Privacy Policy</a> |
+                                <a href="https://www.helpsystems.com/cookie-policy" target="_blank">Cookie Policy</a> |
+                                <a href="https://blog.cobaltstrike.com">Blog</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+               
+        
+        <!-- Consent and Disclaimer Warning Toast -->
+        <div class="fixed-top p-5" style="margin-top: 50;" id="disclaimerPopup">
+            <div class="toast bg-dark text-white w-100 mw-100" role="alert" style="font-size:x-large;" data-autohide="false" >
+                <div class="toast-body p-4 d-flex flex-column">
+                    <h1>Community Kit - Acknowledgement and Disclaimer</h1>
+                    <p></p>
+                    <p><a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several amazing tools and scripts have been written and published, but they can be difficult to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this amazing work.  
+                    </p>
+                    <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by HelpSystems of any of the products, services or opinions of the corporation or organization or individual. HelpSystems bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
+
+                    <p>You must agree to view the content</p>
+    
+                    <div class="ml-auto">
+                        <button type="button" class="btn btn-outline-light mr-3" id="btnDisagree">
+                            Disagree
+                        </button>
+                        <button type="button" class="btn btn-light" id="btnAgree">
+                            Agree
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>      
+             
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.25/dataRender/hyperLink.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.25/dataRender/ellipsis.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.25/dataRender/datetime.js"></script>
+
+    
+
+    <script src="js/disclaimer.js"></script>
+    <script src="js/cckit_table.js"></script>
+
+
+     
+
+</body>
+
+</html>

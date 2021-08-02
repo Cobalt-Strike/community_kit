@@ -1,0 +1,67 @@
+body {
+  font-family: 'lato', sans-serif !important;
+}
+
+.container {
+  max-width: 90%;
+}
+
+.container-fluid {
+  max-width: 90%;
+}
+
+.fa-star {
+  color: orange;
+}
+
+.fa-eye {
+  color: green;
+}
+
+.fa-exclamation-triangle {
+  color: red;
+}
+
+.tooltip-main {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #00ce3e;
+  border: 1px solid #737373;
+  color: #737373;
+  margin: 4px 121px 0 5px;
+  float: right;
+  text-align: left !important;
+}
+
+.tooltip-qm {
+  float: left;
+  margin: -2px 0px 3px 4px;
+  font-size: 18px;
+  color:#d1d1d1
+}
+
+.tooltip-inner {
+  max-width: 236px !important;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px 10px 20px;
+  background: #620000;
+  color: rgba(255, 255, 255);
+  border: 1px solid #737373;
+  text-align: left;
+  
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #f00;
+  /* Red */
+}
+
