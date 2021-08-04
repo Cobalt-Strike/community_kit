@@ -1,6 +1,7 @@
 Malleable-C2, vestjoe/cobaltstrike_services
 BOF, xforcered/CredBandit
 BOF, xforcered/InlineExecute-Assembly
+BOF, xforcered/Detect-Hooks
 BOF, outflanknl/FindObjects-BOF
 Aggressor, outflanknl/HelpColor
 BOF, outflanknl/InlineWhispers
