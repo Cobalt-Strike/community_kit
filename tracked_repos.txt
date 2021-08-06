@@ -8,7 +8,6 @@ BOF, outflanknl/InlineWhispers
 BOF, outflanknl/WdToggle
 Aggressor, outflanknl/Dumpert
 BOF, trustedsec/CS-Situational-Awareness-BOF
-Aggressor, harleyQu1nn/AggressorScripts
 Aggressor, bluscreenofjeff/AggressorScripts
 Aggressor, cobalt-strike/beacon_health_check
 Malleable-C2, cobalt-strike/Malleable-C2-Profiles
@@ -21,17 +20,15 @@ Mallealbe-C2, threatexpress/random_c2_profile
 Malleable-C2, threatexpress/cs2modrewrite
 Malleable-C2, threatexpress/malleable-c2
 BOF, CCob/BOF.NET
-BOF, dtmsecurity/bof_helper
 Aggressor, rasta-mouse/Aggressor-Script
 Infrastructure, mgeeky/RedWarden
 Aggressor, mgeeky/cobalt-arsenal
 Aggressor, vysecurity/Aggressor-VYSEC
 Aggressor, killswitch-GUI/CobaltStrike-ToolKit
-External-C2, RhinoSecurityLabs/external_c2_framework
-External-C2, mdsecactivebreach/Browser-ExternalC2
-External-C2, ryhanson/ExternalC2
 External-C2, Und3rf10w/external_c2_framework
-BOF, Yaxser/CobaltStrike-BOF
+Aggressor, Und3rf10w/Aggressor-scripts
+External-C2, mdsecactivebreach/Browser-ExternalC2
+External-C2, Und3rf10w/external_c2_framework
 BOF, ajpc500/BOFs
 Aggressor, NVISOsecurity/cobalt-strike-notifier
 BOF, boku7/HOLLOW
@@ -39,6 +36,5 @@ BOF, boku7/injectAmsiBypass
 BOF, boku7/SPAWN
 Aggressor, darkoperator/vscode-language-aggressor 
 Aggressor, capt-meelo/Beaconator
-BOF, nccgroup/nccfsas
 BOF, tomcarver16/BOF-DLL-Inject
 Infrastructure, bashexplode/cs2webconfig
