@@ -39,3 +39,4 @@ BOF, tomcarver16/BOF-DLL-Inject
 Infrastructure, bashexplode/cs2webconfig
 Aggressor, harleyQu1nn/AggressorScripts
 BOF, dtmsecurity/bof_helper
+Aggressor, RCStep/CSSG
