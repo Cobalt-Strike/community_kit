@@ -28,7 +28,6 @@ Aggressor, killswitch-GUI/CobaltStrike-ToolKit
 External-C2, Und3rf10w/external_c2_framework
 Aggressor, Und3rf10w/Aggressor-scripts
 External-C2, mdsecactivebreach/Browser-ExternalC2
-External-C2, Und3rf10w/external_c2_framework
 BOF, ajpc500/BOFs
 Aggressor, NVISOsecurity/cobalt-strike-notifier
 BOF, boku7/HOLLOW
