@@ -51,7 +51,7 @@ $('#btnDisagree').click(()=>{
 $('#btnAgree').click(()=>{
     setCookie('acceptConsent','1',1)
     $('.toast').toast('hide')
-    window.location.href = "/";
+    window.location.href = "/community_kit";
 
 })
 
