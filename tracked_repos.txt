@@ -37,3 +37,4 @@ Aggressor, darkoperator/vscode-language-aggressor
 Aggressor, capt-meelo/Beaconator
 BOF, tomcarver16/BOF-DLL-Inject
 Infrastructure, bashexplode/cs2webconfig
+Aggressor, harleyQu1nn/AggressorScripts
