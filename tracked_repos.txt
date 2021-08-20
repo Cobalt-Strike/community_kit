@@ -33,6 +33,8 @@ Aggressor, NVISOsecurity/cobalt-strike-notifier
 BOF, boku7/HOLLOW
 BOF, boku7/injectAmsiBypass
 BOF, boku7/SPAWN
+boku7/whereami
+boku7/CobaltStrikeReflectiveLoader
 Aggressor, darkoperator/vscode-language-aggressor 
 Aggressor, capt-meelo/Beaconator
 BOF, tomcarver16/BOF-DLL-Inject
