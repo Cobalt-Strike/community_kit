@@ -19,7 +19,7 @@ Aggressor, FortyNorthSecurity/AggressorAssessor
 Mallealbe-C2, threatexpress/random_c2_profile
 Malleable-C2, threatexpress/cs2modrewrite
 Malleable-C2, threatexpress/malleable-c2
-Aggressor, cobaltstrike_payload_generator
+Aggressor, threatexpress/cobaltstrike_payload_generator
 BOF, CCob/BOF.NET
 Aggressor, rasta-mouse/Aggressor-Script
 Infrastructure, mgeeky/RedWarden
