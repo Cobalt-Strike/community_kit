@@ -36,7 +36,7 @@ BOF, boku7/injectAmsiBypass
 BOF, boku7/SPAWN
 BOF, boku7/whereami
 UDRL, boku7/CobaltStrikeReflectiveLoader
-Aggressor, darkoperator/vscode-language-aggressor 
+Aggressor, darkoperator/vscode-language-aggressor
 Aggressor, capt-meelo/Beaconator
 BOF, tomcarver16/BOF-DLL-Inject
 Infrastructure, bashexplode/cs2webconfig
