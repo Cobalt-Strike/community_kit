@@ -4,7 +4,7 @@
 
 # Variables
 cwd=`pwd`
-community_kit_path=$cwd/"community_kit"
+community_kit_path=$cwd/"cobaltstrike_community_kit"
 community_kit_projects="https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/tracked_repos.txt"
 community_kit_readme="https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/README.md"
 community_kit_license="https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/LICENSE"
