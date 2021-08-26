@@ -14,12 +14,6 @@
     
     <link href="css/style.css" rel="stylesheet">
 
-    <meta name="twitter:title" content="Community Kit">
-
-
-
-
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@joevest">
     <meta name="twitter:creator" content="@joevest">
@@ -27,7 +21,6 @@
     <meta name="twitter:description" content="Cobalt Strike Community Kit">
     <meta name="twitter:image" content="https://cobalt-strike.github.io/community_kit/community_kit.png>
     
-
     <title>Cobalt Strike Community Kit</title>
 </head>
 
@@ -102,6 +95,58 @@
 
                 </div>
 
+                 <!-- Download Button trigger modal -->
+                 <div class="p-2">
+                    <button type="button" class="btn btn-Info" data-toggle="modal" data-target="#downloadModal">
+                    Download Scripot
+                    </button>
+
+                    <!-- Download Modal -->
+                    <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="downloadModalLongTitle">
+                                Download</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by HelpSystems of any of the products, services or opinions of the corporation or organization or individual. HelpSystems bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
+
+                                <p>A download script has been provided for convenience.</p>
+
+                                <p>The script `community_kit_downloader.sh` can be used to download or update all projects in the community kit.</p>
+
+                                <p>Requirements</p>
+                                <ul>
+                                    <li>Designed for Linux</li>
+                                    <li>bash</li>
+                                    <li>git</li>
+                                    <li>curl</li>
+                                </ul>
+
+                                <p>Usage</p>
+
+                                <p>CD to a starting directory</p>
+
+                                <p><pre>cd /backup</pre></p>
+                                <p>Run script</p>
+                                <p><pre>curl -s https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/community_kit_downloader.sh | bash</pre></p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <!-- Submit Request Button -->
                 <div class="p-2">
                     <a href="submit_request.html" class="btn btn-Info">Have a Suggestion?</a>
                     
