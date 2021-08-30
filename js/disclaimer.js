@@ -24,16 +24,7 @@ function eraseCookie(name) {
 
 function cookieConsent() {
 
-    // If UserAgent is from Twitter, ignore the cookie
-
-    if (window.navigator.userAgent.includes("Twitter")) {
-        var x = document.getElementById("cckitContent");
-        var y = document.getElementById("disclaimerPopup");
-
-        x.style.visibility = "visible";
-        y.style.visibility = "hidden";
-
-    } else if (!getCookie('acceptConsent')) {
+    if (!getCookie('acceptConsent')) {
         // Hide contents
         var x = document.getElementById("cckitContent");
         var y = document.getElementById("disclaimerPopup");
