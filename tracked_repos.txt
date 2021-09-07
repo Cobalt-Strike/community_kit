@@ -52,3 +52,4 @@ BOF, crypt0p3g/bof-collection
 BOF, EspressoCake/Process_Protection_Level_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
+BOF, apokryptein/secinject
