@@ -50,8 +50,12 @@ BOF, trainr3kt/MemReader_BoF
 BOF, trainr3kt/Readfile_BoF
 BOF, crypt0p3g/bof-collection
 BOF, EspressoCake/Process_Protection_Level_BOF
+BOF, EspressoCake/Toggle_Token_Privileges_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
 BOF, ceramicskate0/BOF-Builder
 UDRL, SecIdiot/TitanLdr
+BOF, netero1010/ServiceMove-BOF
+BOF, netero1010/TrustedPath-UACBypass-BOF
+Aggressor, mez-0/winrmdll
