@@ -24,6 +24,7 @@ BOF, CCob/BOF.NET
 Aggressor, rasta-mouse/Aggressor-Script
 Infrastructure, mgeeky/RedWarden
 Aggressor, mgeeky/cobalt-arsenal
+UDRL, mgeeky/ElusiveMice
 Aggressor, vysecurity/Aggressor-VYSEC
 Aggressor, killswitch-GUI/CobaltStrike-ToolKit
 External-C2, Und3rf10w/external_c2_framework
