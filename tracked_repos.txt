@@ -60,3 +60,4 @@ UDRL, SecIdiot/TitanLdr
 BOF, netero1010/ServiceMove-BOF
 BOF, netero1010/TrustedPath-UACBypass-BOF
 Aggressor, mez-0/winrmdll
+Aggressor, Verizon/redshell
