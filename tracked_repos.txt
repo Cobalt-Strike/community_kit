@@ -37,6 +37,7 @@ BOF, boku7/injectAmsiBypass
 BOF, boku7/SPAWN
 BOF, boku7/whereami
 UDRL, boku7/CobaltStrikeReflectiveLoader
+BOF, boku7/injectEtwBypass
 Aggressor, darkoperator/vscode-language-aggressor
 Aggressor, capt-meelo/Beaconator
 BOF, tomcarver16/BOF-DLL-Inject
