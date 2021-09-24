@@ -53,6 +53,7 @@ BOF, trainr3kt/Readfile_BoF
 BOF, crypt0p3g/bof-collection
 BOF, EspressoCake/Process_Protection_Level_BOF
 BOF, EspressoCake/Toggle_Token_Privileges_BOF
+BOF, EspressoCake/PPLDump_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
