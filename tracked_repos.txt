@@ -55,6 +55,7 @@ BOF, EspressoCake/Process_Protection_Level_BOF
 BOF, EspressoCake/Toggle_Token_Privileges_BOF
 BOF, EspressoCake/PPLDump_BOF
 BOF, EspressoCake/Needle_Sift_BOF
+BOF, EspressoCake/Self_Deletion_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
