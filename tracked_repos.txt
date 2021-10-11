@@ -56,6 +56,7 @@ BOF, EspressoCake/Toggle_Token_Privileges_BOF
 BOF, EspressoCake/PPLDump_BOF
 BOF, EspressoCake/Needle_Sift_BOF
 BOF, EspressoCake/Self_Deletion_BOF
+BOF, EspressoCake/Firewall_Walker_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
