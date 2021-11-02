@@ -60,6 +60,7 @@ BOF, EspressoCake/Self_Deletion_BOF
 BOF, EspressoCake/Firewall_Walker_BOF
 BOF, EspressoCake/HandleKatz_BOF
 BOF, EspressoCake/DLL_Imports_BOF
+BOF, EspressoCake/DLL-Hijack-Search-Order-BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
