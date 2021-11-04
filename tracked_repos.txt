@@ -71,3 +71,4 @@ BOF, netero1010/TrustedPath-UACBypass-BOF
 Aggressor, Verizon/redshell
 Aggressor, mez-0/winrmdll
 Aggressor, jordanpotti/opsec-aggressor
+BOF, jsecu/CredManBOF
