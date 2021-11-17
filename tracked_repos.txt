@@ -74,3 +74,4 @@ Aggressor, mez-0/winrmdll
 Aggressor, jordanpotti/opsec-aggressor
 BOF, jsecu/CredManBOF
 Malleable-C2, xx0hcd/Malleable-C2-Profiles
+BOF, securifybv/Visual-Studio-BOF-template
