@@ -62,6 +62,7 @@ BOF, EspressoCake/HandleKatz_BOF
 BOF, EspressoCake/DLL_Imports_BOF
 BOF, EspressoCake/DLL-Hijack-Search-Order-BOF
 BOF, EspressoCake/DLL-Exports-Extraction-BOF
+BOF, EspressoCake/DLL_Version_Enumeration_BOF
 Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
