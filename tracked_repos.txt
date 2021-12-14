@@ -78,3 +78,4 @@ Malleable-C2, xx0hcd/Malleable-C2-Profiles
 BOF, securifybv/Visual-Studio-BOF-template
 BOF, Sh0ckFR/InlineWhispers2
 BOF, connormcgarr/tgtdelegation
+BOF, DallasFR/Cobalt-Clip
