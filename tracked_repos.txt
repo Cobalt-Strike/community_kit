@@ -79,3 +79,4 @@ BOF, securifybv/Visual-Studio-BOF-template
 BOF, Sh0ckFR/InlineWhispers2
 BOF, connormcgarr/tgtdelegation
 BOF, DallasFR/Cobalt-Clip
+Logging, Patrick-DE/Cobaltstrike-logparser
