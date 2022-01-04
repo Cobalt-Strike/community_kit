@@ -80,3 +80,4 @@ BOF, Sh0ckFR/InlineWhispers2
 BOF, connormcgarr/tgtdelegation
 BOF, DallasFR/Cobalt-Clip
 Logging, Patrick-DE/Cobaltstrike-logparser
+Aggressor, Peco602/cobaltstrike-aggressor-scripts
