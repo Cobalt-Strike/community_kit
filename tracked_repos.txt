@@ -12,6 +12,7 @@ Aggressor, bluscreenofjeff/AggressorScripts
 Aggressor, cobalt-strike/beacon_health_check
 Aggressor, cobalt-strike/sleep_python_bridge
 Malleable-C2, cobalt-strike/Malleable-C2-Profiles
+BOF, Cobalt-Strike/bof_template
 BOF, cobalt-strike/unhook-bof
 BOF, cobalt-strike/ZeroLogon-BOF
 Kit, cobalt-strike/ElevateKit
