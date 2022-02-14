@@ -52,6 +52,7 @@ BOF, Yaxser/CobaltStrike-BOF
 Aggressor, 001SPARTaN/aggressor_scripts
 BOF, trainr3kt/MemReader_BoF
 BOF, trainr3kt/Readfile_BoF
+BOF, trainr3kt/NoteThief
 BOF, crypt0p3g/bof-collection
 BOF, EspressoCake/Process_Protection_Level_BOF
 BOF, EspressoCake/Toggle_Token_Privileges_BOF
