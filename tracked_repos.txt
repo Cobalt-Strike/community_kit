@@ -69,7 +69,6 @@ Aggressor, EspressoCake/Aggressor_Scripts
 BOF, RiccardoAncarani/BOFs
 BOF, apokryptein/secinject
 BOF, ceramicskate0/BOF-Builder
-UDRL, SecIdiot/TitanLdr
 BOF, netero1010/ServiceMove-BOF
 BOF, netero1010/TrustedPath-UACBypass-BOF
 Aggressor, Verizon/redshell
