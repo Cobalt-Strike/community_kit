@@ -83,3 +83,5 @@ BOF, DallasFR/Cobalt-Clip
 Logging, Patrick-DE/Cobaltstrike-logparser
 Aggressor, Peco602/cobaltstrike-aggressor-scripts
 Aggressor, ScriptIdiot/BeaconNotifier-Discord
+BOF, helpsystems/nanodump
+BOF, trustedsec/CS-Remote-OPs-BOF
