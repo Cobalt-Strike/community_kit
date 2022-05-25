@@ -85,3 +85,5 @@ Aggressor, Peco602/cobaltstrike-aggressor-scripts
 Aggressor, ScriptIdiot/BeaconNotifier-Discord
 BOF, helpsystems/nanodump
 BOF, trustedsec/CS-Remote-OPs-BOF
+BOF, Octoberfest7/KDStab
+BOF, Octoberfest7/EventViewerUAC_BOF
