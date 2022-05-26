@@ -87,3 +87,5 @@ BOF, helpsystems/nanodump
 BOF, trustedsec/CS-Remote-OPs-BOF
 BOF, Octoberfest7/KDStab
 BOF, Octoberfest7/EventViewerUAC_BOF
+Aggressor, EspressoCake/DynamicTabRename
+Aggressor, EspressoCake/BeaconDownloadSync
