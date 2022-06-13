@@ -89,3 +89,4 @@ BOF, Octoberfest7/KDStab
 BOF, Octoberfest7/EventViewerUAC_BOF
 Aggressor, EspressoCake/DynamicTabRename
 Aggressor, EspressoCake/BeaconDownloadSync
+BOF, outflanknl/C2-Tool-Collection
