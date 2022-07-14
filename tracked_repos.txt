@@ -91,3 +91,4 @@ Aggressor, EspressoCake/DynamicTabRename
 Aggressor, EspressoCake/BeaconDownloadSync
 BOF, outflanknl/C2-Tool-Collection
 BOF, m3rcer/Chisel-Strike
+RDLL, ScriptIdiot/SysmonQuiet
