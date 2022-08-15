@@ -92,3 +92,5 @@ Aggressor, EspressoCake/BeaconDownloadSync
 BOF, outflanknl/C2-Tool-Collection
 BOF, m3rcer/Chisel-Strike
 RDLL, ScriptIdiot/SysmonQuiet
+BOF, erberkan/dump-hives-BOF
+BOF, netero1010/RDPHijack-BOF
