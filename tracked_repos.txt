@@ -94,3 +94,5 @@ BOF, m3rcer/Chisel-Strike
 RDLL, ScriptIdiot/SysmonQuiet
 BOF, erberkan/dump-hives-BOF
 BOF, netero1010/RDPHijack-BOF
+BOF, Henkru/cs-token-vault
+UDRL, kyleavery/AceLdr
