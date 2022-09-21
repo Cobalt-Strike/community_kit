@@ -96,3 +96,9 @@ BOF, erberkan/dump-hives-BOF
 BOF, netero1010/RDPHijack-BOF
 BOF, Henkru/cs-token-vault
 UDRL, kyleavery/AceLdr
+BOF, kyleavery/inject-assembly
+BOF, IcebreakerSecurity/DelegationBOF
+BOF, IcebreakerSecurity/PersistBOF
+Malleable-C2, CodeXTF2/Burp2Malleable
+Aggressor, CodeXTF2/cobaltstrike-headless
+BOF, ScriptIdiot/BOF-patchit
