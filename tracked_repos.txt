@@ -102,3 +102,4 @@ BOF, IcebreakerSecurity/PersistBOF
 Malleable-C2, CodeXTF2/Burp2Malleable
 Aggressor, CodeXTF2/cobaltstrike-headless
 BOF, ScriptIdiot/BOF-patchit
+Aggressor, EspressoCake/RecreateCSDownloadsTree
