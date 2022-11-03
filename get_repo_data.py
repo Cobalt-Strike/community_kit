@@ -67,13 +67,16 @@ with open(tracked_repos) as f:
                 else:
                     repo_data_json['has_binary'] = ", ".join(bins)
 
-                # Get latest commit message
+                # Get latest commit message and date
                 current_repo = Repo(projectPath)
-                commit_message = current_repo.head.commit.message
+                headcommit = current_repo.head.commit
+                commit_message = headcommit.message
+                commit_date = headcommit.committed_date
 
                 # Add latest commit message to custom field
 
                 repo_data_json['commit_message'] = commit_message
+                repo_data_json['commit_date'] = commit_date
                 
                 # Add custom category field to JSON
                 repo_data_json['category'] = category
