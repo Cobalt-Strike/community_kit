@@ -15,7 +15,7 @@ $(document).ready(function() {
         dataSrc: 'data'
     },
     columns: [
-        { data: "pushed_at" },
+        { data: "commit_date" },
         { data: "category" },
         { data: "owner.login" },
         { data: "owner.avatar_url" },
@@ -76,12 +76,13 @@ $(document).ready(function() {
                 //return moment(data).format('YYYY-MMMM-DD');
                 
                 // Has this been updated in the last 30 days?
-                var d = moment().diff(data, 'days');
+                var c = moment.unix(data); // date is a unix epoch date
+                var d = moment().diff(c, 'days');
                 if (d < 30){
-                    return moment(data).format('YYYY-MM-DD') + " " + '<i class="fas fa-star fa-lg"></i>';
+                    return c.format('YYYY-MM-DD') + " " + '<i class="fas fa-star fa-lg"></i>';
                     
                 } else {
-                    return moment(data).format('YYYY-MM-DD');
+                    return c.format('YYYY-MM-DD');
                 }
 
                 //return moment(data).format('DD-MMMM-YYYY');
