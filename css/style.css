@@ -65,3 +65,10 @@ body {
   /* Red */
 }
 
+.bg-green {
+  background-color: #004442!important;
+}
+
+.fg-cream {
+  color: #E3E3E3!important;
+}
