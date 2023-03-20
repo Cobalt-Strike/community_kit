@@ -105,3 +105,4 @@ BOF, ScriptIdiot/BOF-patchit
 Aggressor, EspressoCake/RecreateCSDownloadsTree
 BOF, CodeXTF2/ScreenshotBOF
 BOF, Octoberfest7/Inline-Execute-PE
+BOF, mertdas/PrivKit
