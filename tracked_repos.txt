@@ -106,3 +106,4 @@ Aggressor, EspressoCake/RecreateCSDownloadsTree
 BOF, CodeXTF2/ScreenshotBOF
 BOF, Octoberfest7/Inline-Execute-PE
 BOF, mertdas/PrivKit
+BOF, Mr-Un1k0d3r/Elevate-System-Trusted-BOF
