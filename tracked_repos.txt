@@ -79,7 +79,6 @@ Malleable-C2, xx0hcd/Malleable-C2-Profiles
 BOF, securifybv/Visual-Studio-BOF-template
 BOF, Sh0ckFR/InlineWhispers2
 BOF, connormcgarr/tgtdelegation
-BOF, DallasFR/Cobalt-Clip
 Logging, Patrick-DE/Cobaltstrike-logparser
 Aggressor, Peco602/cobaltstrike-aggressor-scripts
 Aggressor, ScriptIdiot/BeaconNotifier-Discord
