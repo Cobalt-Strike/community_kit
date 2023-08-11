@@ -109,4 +109,4 @@ BOF, Mr-Un1k0d3r/Elevate-System-Trusted-BOF
 BOF, rasta-mouse/PPEnum
 Aggressor, NVISOsecurity/pyCobaltHound
 BOF, Mr-Un1k0d3r/Cookie-Graber-BOF
-Aggressor, 0xbad53c/OffSecOps-Arsenal/
+Aggressor, 0xbad53c/OffSecOps-Arsenal
