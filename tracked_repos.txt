@@ -112,4 +112,5 @@ BOF, Mr-Un1k0d3r/Cookie-Graber-BOF
 Aggressor, 0xbad53c/OffSecOps-Arsenal
 BOF, mandiant/msi-search
 BOF, rasta-mouse/SCMUACBypass
-Kit, cobalt-strike/bof_template
+Kit, cobalt-strike/bof-vs
+Kit, cobalt-strike/callback_examples
