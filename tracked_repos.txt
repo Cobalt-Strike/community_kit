@@ -113,4 +113,4 @@ Aggressor, 0xbad53c/OffSecOps-Arsenal
 BOF, mandiant/msi-search
 BOF, rasta-mouse/SCMUACBypass
 BOF, cobalt-strike/bof-vs
-BOF, cobalt-strike/callback_examples
+Aggressor, cobalt-strike/callback_examples
