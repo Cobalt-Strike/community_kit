@@ -114,3 +114,4 @@ BOF, mandiant/msi-search
 BOF, rasta-mouse/SCMUACBypass
 BOF, cobalt-strike/bof-vs
 Aggressor, cobalt-strike/callback_examples
+BOF, fortra/No-Consolation
