@@ -116,3 +116,4 @@ BOF, cobalt-strike/bof-vs
 Aggressor, cobalt-strike/callback_examples
 BOF, fortra/No-Consolation
 Aggressor, nickvourd/CS-Aggressor-Kit
+BOF, rasta-mouse/SpawnWith
