@@ -1,5 +1,5 @@
 body {
-  font-family: 'lato', sans-serif !important;
+  font-family: Poppins, Helvetica, sans-serif !important;
   color:#ffffff;
   background-color: #001615;
 }
@@ -174,4 +174,12 @@ footer .content h3, .footer .content h3 a, .footer h3, .footer h3 a {
     font-weight: 700;
     text-decoration: none;
     padding-right:20px;
+}
+
+.display-3 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 100px;
+    font-family: Poppins;
+    text-transform: uppercase;
 }
