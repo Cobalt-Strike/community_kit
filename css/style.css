@@ -1,5 +1,7 @@
 body {
   font-family: 'lato', sans-serif !important;
+  color:#ffffff;
+  background-color: #001615;
 }
 
 .container {
@@ -11,15 +13,15 @@ body {
 }
 
 .fa-star {
-  color: orange;
+  color: rgb(255, 174, 0);
 }
 
 .fa-eye {
-  color: green;
+  color: rgb(41, 167, 147);
 }
 
 .fa-exclamation-triangle {
-  color: red;
+  color: rgb(207, 72, 51);
 }
 
 .tooltip-main {
@@ -27,7 +29,7 @@ body {
   height: 15px;
   border-radius: 50%;
   font-weight: 700;
-  background: #00ce3e;
+  background-color: #00ce3e;
   border: 1px solid #737373;
   color: #737373;
   margin: 4px 121px 0 5px;
@@ -45,12 +47,11 @@ body {
 .tooltip-inner {
   max-width: 236px !important;
   height: 100%;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   padding: 10px 15px 10px 20px;
-  background: #620000;
+  background: #001615;
   color: rgba(255, 255, 255);
-  border: 1px solid #737373;
+  border: 1px solid #77ECC2;
   text-align: left;
   
 }
@@ -70,9 +71,107 @@ body {
 }
 
 .bg-fortra {
-  background-color: #006a56 !important;
+  background-color: #001615 !important;
 }
 
 .fg-cream {
   color: #E3E3E3!important;
+}
+
+select{
+  color: #ffffff;
+  background-color: transparent;
+}
+
+option{
+  color: #ffffff;
+  background-color: #001615;
+}
+
+input {
+  color:#ffffff;
+}
+
+a {
+    color: #77ECC2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #8fe5f2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+table thead th{
+    border-bottom: 1px solid #77ECC2 !important;
+}
+
+table tfoot th{
+    border-top: 1px solid #77ECC2 !important;
+}
+
+table td{
+    border-bottom: 1px solid rgba(143, 229, 242,0.2)  !important;
+}
+
+.btn { margin: 5px; 
+      padding: 10px; 
+      background-color: #ffffff; 
+      color: #363e49; 
+      border: none; 
+      cursor: pointer; 
+      border-radius: 1.5rem; 
+      text-transform: uppercase; 
+      font-weight: 700;
+     }
+
+.btn:hover {
+  background-color: #ffffff; 
+  color: #363e49;
+}
+.btn-success {
+  background-color: #77ecc2; 
+  color: #004442;
+}
+
+.btn-secondary {
+  background-color: #8fe5f2; 
+  color: #004442;
+}
+
+.btn-warning {
+  background-color: rgb(255, 174, 0); 
+  color: #004442;
+}
+
+.modal-content {
+  background-color: #001615;
+}
+
+pre {
+  color:#ffffff;
+}
+
+.copyright {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+footer {
+  font-size: 0.8em;
+}
+
+footer .content h3, .footer .content h3 a, .footer h3, .footer h3 a {
+    color: #8fe5f2;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    padding-right:20px;
 }
