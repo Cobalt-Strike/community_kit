@@ -6,20 +6,34 @@ on:
     - '*'
 
 jobs:
-  readme-test:
+  embed-me:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           ref: refs/heads/${{ github.head_ref }}
-
-      - name: embedding readme
-        uses: tokusumi/markdown-embed-code@v1.0.0
-        with:
-          markdown: "docs/3_Malleable_C2_reference.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          message: "auto commit for embedding"
-          no_change: "No change on Readme."
-          silent: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Run embedme
+        run: npx embedme docs/3_Malleable_C2_reference.md
+
+
+      - name: Commit and push changed .md files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git ls-files --deleted '*.md' | xargs -r git rm
+          git ls-files -m '*.md' | xargs -r git add
+
+          if [[ -n "$(git diff --cached)" ]]; then
+            git commit -m "chore: update embedded markdown [auto]"
+            git push origin HEAD
+          else
+            echo "No .md file changes to commit"
+          fi
