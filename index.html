@@ -57,11 +57,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5M447WW');</script>
 <!-- End Google Tag Manager -->
 
-
-
-    <link rel="stylesheet" type="text/css" href="css/dataTables/1.13.2/jquery.dataTables.css">
-
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -81,10 +76,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://github.com/Cobalt-Strike/community_kit/raw/main/community_kit.png">
     <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
     
-    <title>Cobalt Strike Community Kit</title>
+    <title>Cobalt Strike Community Hub</title>
 
-
-
+  <script type="module">
+        import ZeroMd, { STYLES } from 'https://cdn.jsdelivr.net/npm/zero-md@3'
+        customElements.define('zero-md', class extends ZeroMd {
+            async load() {
+            await super.load()
+            this.template = `
+        <link rel="stylesheet" href="css/zero-md/fortra-github-markdown-dark.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11/styles/github-dark.min.css" />
+        `
+            }
+        })
+    </script>
 
 </head>
 
@@ -93,7 +98,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-5M447WW
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <nav class="navbar navbar-expand-md shadow-sm bg-fortra mh-head menubar sticky-top" id="fortra-header">
         <div class="container">
             <a class="navbar-brand" href="https://www.fortra.com" target="_blank"> 
@@ -101,8 +105,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
             <div class="collapse navbar-collapse" id="my-menu">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link text-nowrap active" href="index.html">Community Kit</a></li>
-                    <li class="nav-item"><a class="nav-link text-nowrap" href="cs_knowledge_hub.html">Knowledge Hub</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap active" href="index.html">Knowledge Hub</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap" href="community_kit.html">Community Kit</a></li>                   
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com" target="_blank">cobaltstrike.com</a></li>
@@ -120,226 +124,189 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h1 class="display-3"><span style="color:#77ECC2;">Cobalt Strike</span> Community Hub</h1>
                 <a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several excellent tools and scripts have been written and published, but they can be challenging to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this fantastic work.    
             </p>
+                
+        </div>
+        <hr/>
 
-            <!-- Guidance Buttons -->
+        <div class="container-fluid">
             <div class="row">
-            
-                <!-- Disclaimer Button trigger modal -->
-                <div class="p-2">
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#disclaimerModal">
-                    Disclaimer
-                    </button>
-
-                    <!-- Disclaimer Modal -->
-                    <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">
-                                Disclaimer</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
+                <!-- Left Column - Collapsible Menu -->
+                <div class="col-md-3 col-lg-2" id="sidebar">
+                    <div class="sidebar-sticky">
+                        <!-- Toggle button for mobile -->
+                        <button class="btn btn-outline-light d-md-none mb-3" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i> Menu
+                        </button>
+                        
+                        <!-- Collapsible menu -->
+                        <div class="collapse d-md-block" id="sidebarMenu">
+                            <nav class="nav flex-column">
+                                <h5 class="text-light mb-3" >Community Hub</h5>
+                                <a class="nav-link active" href="#" data-md="docs/0_Readme_home.md">
+                                    <i class="fas fa-home"></i> Home
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/1_Security_research_environment_setup.md">
+                                    <i class="fas fa-tools"></i> Environment Setup
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/2_DNS_C2_Dev_Setup.md">
+                                    <i class="fas fa-globe"></i> DNS C2 Dev Setup
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/Best Practices.md">
+                                    <i class="fas fa-star"></i> Best Practices
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/Advanced Topics.md">
+                                    <i class="fas fa-graduation-cap"></i> Advanced Topics
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/Troubleshooting.md">
+                                    <i class="fas fa-wrench"></i> Troubleshooting
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/3_Malleable_C2_reference.md">
+                                    <i class="fas fa-wrench"></i> Malleable C2 Reference
+                                </a>
+                                
+                                <hr class="my-3">
+                                
+                                <h5 class="text-light mb-3">Tutorials</h5>
+                                <a class="nav-link" href="#" data-md="docs/tutorials/Extension Development.md">
+                                    <i class="fas fa-code"></i> Extension Development
+                                </a>
+                                <a class="nav-link" href="#" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
+                                    <i class="fas fa-file-code"></i> BOF Creation
+                                </a>
+                                <a class="nav-link" href="#" data-md="docs/tutorials/Script Writing.md">
+                                    <i class="fas fa-terminal"></i> Script Writing
+                                </a>
+                            </nav>
                         </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by Fortra of any of the products, services or opinions of the corporation or organization or individual. Fortra bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
+                    </div>
+                </div>
+                
+                <!-- Right Panel - Content Area -->
+                <div class="col-md-9 col-lg-10" id="content-panel">
+                    <div class="content-wrapper">
+                        <!-- Loading indicator -->
+                        <div id="loading-indicator" class="text-center py-5" style="display: none;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <p class="mt-2 text-light">Loading documentation...</p>
+                        </div>
+                        
+                        <!-- Content area -->
+                        <div id="markdown-content">
+                            <zero-md src="docs/0_Readme_home.md"></zero-md>
+                        </div>
+                    </div>
+                    <footer class="bg-footer-1">
+                        <div class="container">
+                            <div class="row copyright">
+                                <div class="col">
+                                    <section class="row region region-footer-bottom">
+                                        <div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
+                                            <div class="content">
+                                                <div class="col">
+                                                    <h3 class="d-inline-block">
+                                                        <a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
+                                                    </h3>
+                                                    <h3 class="d-inline-block">
+                                                        <div id="teconsent"></div>
+                                                    </h3>
+                                                    <h3 class="d-inline-block">
+                                                        <a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
+                                                    </h3>
+                                                    <h3 class="d-inline-block">
+                                                        <a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
+                                                    </h3>
+                                                    <h3 class="d-inline-block">
+                                                        <a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
+                                                    </h3>
+                                                    <h3 class="d-inline-block">
+                                                        <a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
+                                                    </h3>
+                                            Copyright &copy; Fortra, LLC and its group of companies. Fortra&reg;, the Fortra&reg; logos, and other identified marks are proprietary trademarks of Fortra, LLC.
+                                        </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-
+                    </footer>
                 </div>
-
-                <!-- Download Button trigger modal -->
-                <div class="p-2">
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#downloadModal">
-                    Download Script
-                    </button>
-
-                    <!-- Download Modal -->
-                    <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="downloadModalLongTitle">
-                                Download</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <h2>Review the disclaimer before downloading projects from this kit</h2>
-
-                                <p>A download script has been provided for convenience.</p>
-
-                                <p>The script <a href="https://github.com/Cobalt-Strike/community_kit">community_kit_downloader.sh</a> can be used to download or update all projects in the community kit.</p>
-
-                                <p>The script downloads every project to a cobaltstrike_community_kit directory. If the directory already exists, it will update each project.</p>
-
-                                <h3>Requirements</h3>
-                                <ul>
-                                    <li>Designed for Linux</li>
-                                    <li>bash, git , curl</li>
-                                </ul>
-
-                                <h3>Usage</h3>
-
-                                <p>CD to a starting directory</p>
-
-                                <p><pre>cd /backup</pre></p>
-                                <p>Run script via curl</p>
-                                <p><pre>curl -s https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/community_kit_downloader.sh | bash</pre></p>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-
-                </div>
-
-                <!-- Submit Request Button -->
-                <div class="p-2">
-                    <a href="submit_request.html" class="btn btn-success">Submit a project</a>
-                    
-                </div>
-
-            </div>
-                
+            </div>        
         </div>
 
-
-            <hr/>
-        <div class="container" id="cckitContent">
-
-            <h3>Legend</h3>
-                
-            <p><i class="fas fa-star fa-lg"></i> indicates update in the last 30 days.</p>
-            <p><i class="fas fa-exclamation-triangle"></i> indicates the project has precompiled binaries</p>
-            <hr/>
-
-            <table id="cckit_table" class="display stripe" style="width:100%">
-                <thead>
-                    <tr>
-                        <th data-toggle="tooltip" data-placement="top" title="Date the project was last updated">Last Update</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Category of the project">Category</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Primary owner of the project">Owner</th>
-                        <th></th>
-                        <th data-toggle="tooltip" data-placement="top" title="Project name">Name</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Project description">Description</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Latest Commit Message">Commit Message</th>
-                        <th data-toggle="tooltip" data-placement="top" title="GitHub stars are used to highlight popularity">GitHub Stars</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Warning. The project contains pre-compiled binaries. Consider compiling before use.">Has Binary</th>
-                        <th data-toggle="tooltip" data-placement="top" title="Project link">URL</th>
-
-                    </tr>
-                </thead>
-
-                <tfoot>
-                    <tr>
-                        <th>Last Update</th>
-                        <th>Category</th>
-                        <th>Owner</th>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Latest Commit Message</th>
-                        <th>GitHub Stars</th>
-                        <th>Has Binary</th>
-                        <th>URL</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-
-        <footer class="bg-footer-1">
-                <div class="container">
-                    <div class="row copyright">
-                        <div class="col">
-                            <section class="row region region-footer-bottom">
-                                <div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
-                                    <div class="content">
-                                        <div class="col">
-                                            <h3 class="d-inline-block">
-                                                <a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
-                                            </h3>
-                                            <h3 class="d-inline-block">
-                                                <div id="teconsent"></div>
-                                            </h3>
-                                            <h3 class="d-inline-block">
-                                                <a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
-                                            </h3>
-                                            <h3 class="d-inline-block">
-                                                <a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
-                                            </h3>
-                                            <h3 class="d-inline-block">
-                                                <a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
-                                            </h3>
-                                            <h3 class="d-inline-block">
-                                                <a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
-                                            </h3>
-                                    Copyright &copy; Fortra, LLC and its group of companies. Fortra&reg;, the Fortra&reg; logos, and other identified marks are proprietary trademarks of Fortra, LLC.
-                                </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+        
                
         
-        <!-- Consent and Disclaimer Warning Toast -->
-        <div class="fixed-top p-5" style="margin-top: 50;" id="disclaimerPopup">
-            <div class="toast bg-dark text-white w-100 mw-100" role="alert" style="font-size:x-large;" data-autohide="false" >
-                <div class="toast-body p-4 d-flex flex-column">
-                    <h1>Community Kit - Acknowledgement and Disclaimer</h1>
-                    <p></p>
-                    <p><a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several excellent tools and scripts have been written and published, but they can be challenging to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this fantastic work.    
-                    </p>
-                    <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or approval by Fortra of any of the products, services, or opinions of the corporation, organization, or individual. Fortra bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
-
-                    <p>You must agree to view the content</p>
-    
-                    <div class="ml-auto">
-                        <button type="button" class="btn btn-outline-light mr-3" id="btnDisagree">
-                            Disagree
-                        </button>
-                        <button type="button" class="btn btn-light" id="btnAgree">
-                            Agree
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>      
-             
+        <!-- Consent and Disclaimer Warning Toast -->            
 
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" charset="utf8" src="js/dataTables/1.13.2/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf8" src="js/dataTables/1.13.2/plugins/hyperLink.js"></script>
-    <script type="text/javascript" charset="utf8" src="js/dataTables/1.13.2/plugins/ellipsis.js"></script>
-
     <script type="text/javascript" charset="utf8" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="js/dataTables/1.13.2/plugins/datetime.js"></script>
 
-    
-
-    <script src="js/disclaimer.js"></script>
-    <script src="js/cckit_table.js?cb=20221103"></script>
-
-
-     
+    <!-- Knowledge Hub Sidebar JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links with data-md attribute
+            const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-md]');
+            const contentDiv = document.getElementById('markdown-content');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            
+            // Function to load markdown content
+            function loadMarkdown(mdPath) {
+                // Show loading indicator
+                loadingIndicator.style.display = 'block';
+                contentDiv.style.display = 'none';
+                
+                // Update content
+                contentDiv.innerHTML = `<zero-md src="${mdPath}"></zero-md>`;
+                
+                // Simulate loading delay and hide indicator
+                setTimeout(() => {
+                    loadingIndicator.style.display = 'none';
+                    contentDiv.style.display = 'block';
+                }, 500);
+            }
+            
+            // Add click event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get markdown file path
+                    const mdPath = this.getAttribute('data-md');
+                    
+                    // Load the markdown content
+                    loadMarkdown(mdPath);
+                    
+                    // Collapse menu on mobile after selection
+                    if (window.innerWidth < 768) {
+                        const sidebarMenu = document.getElementById('sidebarMenu');
+                        if (sidebarMenu.classList.contains('show')) {
+                            $('#sidebarMenu').collapse('hide');
+                        }
+                    }
+                });
+            });
+            
+            // Handle window resize to manage sidebar behavior
+            window.addEventListener('resize', function() {
+                const sidebarMenu = document.getElementById('sidebarMenu');
+                if (window.innerWidth >= 768) {
+                    sidebarMenu.classList.add('show');
+                }
+            });
+        });
+    </script>    
 
 </body>
 

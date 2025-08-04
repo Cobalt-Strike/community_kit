@@ -93,6 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-5M447WW
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-md shadow-sm bg-fortra mh-head menubar sticky-top" id="fortra-header">
         <div class="container">
             <a class="navbar-brand" href="https://www.fortra.com" target="_blank"> 
@@ -100,8 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
             <div class="collapse navbar-collapse" id="my-menu">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link text-nowrap" href="index.html">Community Kit</a></li>
-                    <li class="nav-item"><a class="nav-link text-nowrap active" href="cs_knowledge_hub.html">Knowledge Hub</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap" href="index.html">Knowledge Hub</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap active" href="community_kit.html">Community Kit</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com" target="_blank">cobaltstrike.com</a></li>
@@ -119,6 +120,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h1 class="display-3"><span style="color:#77ECC2;">Cobalt Strike</span> Community Hub</h1>
                 <a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several excellent tools and scripts have been written and published, but they can be challenging to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this fantastic work.    
             </p>
+
+            <!-- Guidance Buttons -->
+            <div class="row">
+            
+                <!-- Disclaimer Button trigger modal -->
+                <div class="p-2">
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#disclaimerModal">
+                    Disclaimer
+                    </button>
+
+                    <!-- Disclaimer Modal -->
+                    <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">
+                                Disclaimer</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <p>These links are being provided as a convenience and for informational purposes only; they do not constitute an endorsement or an approval by Fortra of any of the products, services or opinions of the corporation or organization or individual. Fortra bears no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. Contact the external site owner for answers to questions regarding its content.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <!-- Download Button trigger modal -->
+                <div class="p-2">
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#downloadModal">
+                    Download Script
+                    </button>
+
+                    <!-- Download Modal -->
+                    <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="downloadModalLongTitle">
+                                Download</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <h2>Review the disclaimer before downloading projects from this kit</h2>
+
+                                <p>A download script has been provided for convenience.</p>
+
+                                <p>The script <a href="https://github.com/Cobalt-Strike/community_kit">community_kit_downloader.sh</a> can be used to download or update all projects in the community kit.</p>
+
+                                <p>The script downloads every project to a cobaltstrike_community_kit directory. If the directory already exists, it will update each project.</p>
+
+                                <h3>Requirements</h3>
+                                <ul>
+                                    <li>Designed for Linux</li>
+                                    <li>bash, git , curl</li>
+                                </ul>
+
+                                <h3>Usage</h3>
+
+                                <p>CD to a starting directory</p>
+
+                                <p><pre>cd /backup</pre></p>
+                                <p>Run script via curl</p>
+                                <p><pre>curl -s https://raw.githubusercontent.com/Cobalt-Strike/community_kit/main/community_kit_downloader.sh | bash</pre></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <!-- Submit Request Button -->
+                <div class="p-2">
+                    <a href="submit_request.html" class="btn btn-success">Submit a project</a>
+                    
+                </div>
+
+            </div>
                 
         </div>
 
@@ -132,43 +226,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <p><i class="fas fa-exclamation-triangle"></i> indicates the project has precompiled binaries</p>
             <hr/>
 
+            <table id="cckit_table" class="display stripe" style="width:100%">
+                <thead>
+                    <tr>
+                        <th data-toggle="tooltip" data-placement="top" title="Date the project was last updated">Last Update</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Category of the project">Category</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Primary owner of the project">Owner</th>
+                        <th></th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project name">Name</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project description">Description</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Latest Commit Message">Commit Message</th>
+                        <th data-toggle="tooltip" data-placement="top" title="GitHub stars are used to highlight popularity">GitHub Stars</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Warning. The project contains pre-compiled binaries. Consider compiling before use.">Has Binary</th>
+                        <th data-toggle="tooltip" data-placement="top" title="Project link">URL</th>
+
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <th>Last Update</th>
+                        <th>Category</th>
+                        <th>Owner</th>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Latest Commit Message</th>
+                        <th>GitHub Stars</th>
+                        <th>Has Binary</th>
+                        <th>URL</th>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
 
         <footer class="bg-footer-1">
-            <div class="container">
-                <div class="row copyright">
-                    <div class="col">
-                        <section class="row region region-footer-bottom">
-                            <div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
-                                <div class="content">
-                                    <div class="col">
-                                        <h3 class="d-inline-block">
-                                            <a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
-                                        </h3>
-                                        <h3 class="d-inline-block">
-                                            <div id="teconsent"></div>
-                                        </h3>
-                                        <h3 class="d-inline-block">
-                                            <a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
-                                        </h3>
-                                        <h3 class="d-inline-block">
-                                            <a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
-                                        </h3>
-                                        <h3 class="d-inline-block">
-                                            <a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
-                                        </h3>
-                                        <h3 class="d-inline-block">
-                                            <a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
-                                        </h3>
-                                Copyright &copy; Fortra, LLC and its group of companies. Fortra&reg;, the Fortra&reg; logos, and other identified marks are proprietary trademarks of Fortra, LLC.
-                            </div>
+                <div class="container">
+                    <div class="row copyright">
+                        <div class="col">
+                            <section class="row region region-footer-bottom">
+                                <div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
+                                    <div class="content">
+                                        <div class="col">
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <div id="teconsent"></div>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
+                                            </h3>
+                                    Copyright &copy; Fortra, LLC and its group of companies. Fortra&reg;, the Fortra&reg; logos, and other identified marks are proprietary trademarks of Fortra, LLC.
                                 </div>
-                            </div>
-                        </section>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
                
         
         <!-- Consent and Disclaimer Warning Toast -->
