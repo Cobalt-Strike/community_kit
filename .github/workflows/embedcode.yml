@@ -1,34 +1,35 @@
-name: Embed code in README
+name: Embed GitHub Snippets
 
 on:
   push:
-    branches:
-    - '*'
+    branches: [ "**" ]  # Run on any branch
+  workflow_dispatch:
 
 jobs:
-  embed-me:
+  embed-code:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
 
-      - name: Set up Node.js
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed to commit to current branch
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
 
-      - name: Run embedme
-        run: npx embedme docs/3_Malleable_C2_reference.md
+      - name: Install dependencies
+        run: npm install axios @octokit/rest
 
+      - name: Embed GitHub code into Markdown
+        run: node .github/scripts/embed-github-snippets.js
 
-      - name: Commit and push changed .md files
+      - name: Commit .md file changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git ls-files --deleted '*.md' | xargs -r git rm
-          git ls-files -m '*.md' | xargs -r git add
-
-          if [[ -n "$(git diff --cached)" ]]; then
-            git commit -m "chore: update embedded markdown [auto]"
-            git push origin HEAD
-          else
-            echo "No .md file changes to commit"
-          fi
+          git add '*.md'
+          git diff --staged --quiet || git commit -m "Embed GitHub code snippets into Markdown"
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
