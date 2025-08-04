@@ -6,7 +6,7 @@ on:
     - '*'
 
 jobs:
-  embed-code:
+  readme-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,9 +15,11 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
           ref: refs/heads/${{ github.head_ref }}
 
-      - uses: tokusumi/markdown-embed-code@main
+      - name: embedding readme
+        uses: tokusumi/markdown-embed-code@v1.0.0
         with:
-          markdown: "/docs/3_Malleable_C2_reference.md"
+          markdown: "docs/3_Malleable_C2_reference.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          message: "synchronizing Readme"
-          silent: true
+          message: "auto commit for embedding"
+          no_change: "No change on Readme."
+          silent: false
