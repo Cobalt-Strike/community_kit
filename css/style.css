@@ -191,3 +191,43 @@ footer .content h3, .footer .content h3 a, .footer h3, .footer h3 a {
 .close:hover {
     color: #ffffff;
 }
+
+/* Make Bootstrap navbar sticky */
+.navbar.sticky-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+}
+
+.menubar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  background-color: #001615 !important;
+}
+
+/* Ensure Bootstrap navbar with menubar class stays sticky */
+.navbar.menubar.sticky-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+}
+
+.menubar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-item li a:hover {
+  color: #77ECC2;
+}
+
+.menubar .active {
+  color: #77ECC2;
+}
