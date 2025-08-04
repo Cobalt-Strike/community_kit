@@ -1,24 +1,79 @@
-name: Embed code in README
+name: Embed External GitHub Code
 
 on:
   push:
-    branches:
-    - '*'
+    paths:
+      - '**/*.md'
+  workflow_dispatch:
 
 jobs:
-  embed-me:
+  embed:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Run embedme
-        run: npx embedme docs/3_Malleable_C2_reference.md
+      - name: Rewrite embed blocks in .md files
+        run: |
+          find . -name '*.md' | while read -r mdfile; do
+            echo "Processing $mdfile"
 
+            # Extract lines with GitHub blob links
+            grep -nE 'https://github.com/.+/blob/.+' "$mdfile" | while IFS=: read -r lineno line; do
+              url=$(echo "$line" | grep -oE 'https://github.com/[^ )]+')
 
-      - name: Commit and push changed .md files
+              # Extract path from GitHub blob URL
+              raw_path=$(echo "$url" | sed -E 's#https://github.com/[^/]+/[^/]+/blob/[^/]+/(.*)#\1#')
+
+              # Path we will save the file to locally
+              local_file="external/$raw_path"
+              mkdir -p "$(dirname "$local_file")"
+
+              # Insert embed block (overwrite next code block if any)
+              # Remove the next lines until the end of the code block
+              awk -v lineno="$lineno" -v embed="<!-- embed:$local_file -->\n<!-- endembed -->" '
+                NR == lineno+2 && /^\`\`\`/ { skipping=1; print "```"; print embed; next }
+                skipping && /^\`\`\`/ { skipping=0; next }
+                skipping { next }
+                { print }
+              ' "$mdfile" > "$mdfile.tmp" && mv "$mdfile.tmp" "$mdfile"
+            done
+          done
+
+      - name: Download GitHub files referenced
+        run: |
+          mkdir -p external
+
+          find . -name '*.md' | while read -r mdfile; do
+            grep -oE 'https://github.com/[^ )]+/blob/[^ )]+' "$mdfile" | while read -r url; do
+              echo "Fetching $url"
+              raw_url=$(echo "$url" \
+                | sed -E 's#https://github.com/([^/]+)/([^/]+)/blob/([^/]+)/(.*)#https://raw.githubusercontent.com/\1/\2/\3/\4#')
+
+              path_in_repo=$(echo "$url" | sed -E 's#https://github.com/[^/]+/[^/]+/blob/[^/]+/##')
+              local_file="external/$path_in_repo"
+
+              mkdir -p "$(dirname "$local_file")"
+              curl -sSL "$raw_url" -o "$local_file"
+            done
+          done
+
+      - name: Run embedme on all .md files
+        run: |
+          find . -name '*.md' | while read -r file; do
+            echo "Embedding in $file"
+            npx embedme "$file"
+          done
+
+      - name: Commit updated .md files if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -27,7 +82,7 @@ jobs:
           git ls-files -m '*.md' | xargs -r git add
 
           if [[ -n "$(git diff --cached)" ]]; then
-            git commit -m "chore: update embedded markdown [auto]"
+            git commit -m "chore: update markdown with embedded GitHub code [auto]"
             git push origin HEAD
           else
             echo "No .md file changes to commit"
