@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
             <div class="collapse navbar-collapse" id="my-menu">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link text-nowrap active" href="index.html">Knowledge Hub</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap active" href="index.html">Community Hub</a></li>
                     <li class="nav-item"><a class="nav-link text-nowrap" href="community_kit.html">Community Kit</a></li>                   
                 </ul>
                 <ul class="navbar-nav">
@@ -140,42 +140,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         
                         <!-- Collapsible menu -->
                         <div class="collapse d-md-block" id="sidebarMenu">
-                            <nav class="nav flex-column">
-                                <h5 class="text-light mb-3" >Community Hub</h5>
-                                <a class="nav-link active" href="#" data-md="docs/0_Readme_home.md">
-                                    <i class="fas fa-home"></i> Home
+                            <nav class="nav flex-column accordion" id="sidebarAccordion">
+                                <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseCommunityHub" role="button" aria-expanded="true" aria-controls="collapseCommunityHub">
+                                <h5 class="mb-0 ">Community Hub</h5>
                                 </a>
-                                <a class="nav-link" href="#" data-md="docs/1_Security_research_environment_setup.md">
-                                    <i class="fas fa-tools"></i> Environment Setup
+                                    <div class="collapse show" id="collapseCommunityHub" data-bs-parent="#sidebarAccordion">
+                                    <a class="nav-link active" href="#" data-md="docs/0_Readme_home.md">
+                                        <i class="fas fa-home"></i> Home
+                                    </a>
+                                    <a class="nav-link" href="#" data-md="docs/1_Security_research_environment_setup.md">
+                                        <i class="fas fa-tools"></i> Environment Setup
+                                    </a>
+                                    <a class="nav-link" href="#" data-md="docs/2_DNS_C2_Dev_Setup.md">
+                                        <i class="fas fa-globe"></i> DNS C2 Dev Setup
+                                    </a>
+                                    <a class="nav-link" href="#" data-md="docs/3_Best_practices.md">
+                                        <i class="fas fa-star"></i> Best Practices
+                                    </a>
+                                    <a class="nav-link" href="#" data-md="docs/Advanced Topics.md">
+                                        <i class="fas fa-graduation-cap"></i> Advanced Topics
+                                    </a>
+                                    <a class="nav-link" href="#" data-md="docs/Troubleshooting.md">
+                                        <i class="fas fa-wrench"></i> Troubleshooting
+                                    </a>
+                                </div>
+
+                                <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseTutorials" role="button" aria-expanded="true" aria-controls="collapseCommunityHub">
+                                <h5 class="mb-0">Tutorials</h5>
                                 </a>
-                                <a class="nav-link" href="#" data-md="docs/2_DNS_C2_Dev_Setup.md">
-                                    <i class="fas fa-globe"></i> DNS C2 Dev Setup
-                                </a>
-                                <a class="nav-link" href="#" data-md="docs/Best Practices.md">
-                                    <i class="fas fa-star"></i> Best Practices
-                                </a>
-                                <a class="nav-link" href="#" data-md="docs/Advanced Topics.md">
-                                    <i class="fas fa-graduation-cap"></i> Advanced Topics
-                                </a>
-                                <a class="nav-link" href="#" data-md="docs/Troubleshooting.md">
-                                    <i class="fas fa-wrench"></i> Troubleshooting
-                                </a>
-                                <a class="nav-link" href="#" data-md="docs/3_Malleable_C2_reference.md">
-                                    <i class="fas fa-wrench"></i> Malleable C2 Reference
-                                </a>
-                                
-                                <hr class="my-3">
-                                
-                                <h5 class="text-light mb-3">Tutorials</h5>
-                                <a class="nav-link" href="#" data-md="docs/tutorials/Extension Development.md">
-                                    <i class="fas fa-code"></i> Extension Development
+                                    <div class="collapse" id="collapseTutorials" data-bs-parent="#sidebarAccordion">
+                                    <a class="nav-link" href="#" data-md="https://raw.githubusercontent.com/Cobalt-Strike/aggressor_script_examples/refs/heads/main/readme.md">
+                                    <i class="fas fa-terminal"></i> Aggressor Scripting
                                 </a>
                                 <a class="nav-link" href="#" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
-                                    <i class="fas fa-file-code"></i> BOF Creation
+                                    <i class="fas fa-code"></i> BOF Creation
                                 </a>
-                                <a class="nav-link" href="#" data-md="docs/tutorials/Script Writing.md">
-                                    <i class="fas fa-terminal"></i> Script Writing
+                                <a class="nav-link" href="#" data-md="docs/tutorials/Extension Development.md">
+                                    <i class="fas fa-file-code"></i> Post-Ex Dlls
                                 </a>
+                                </div>                             
                             </nav>
                         </div>
                     </div>
@@ -242,10 +245,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Consent and Disclaimer Warning Toast -->            
 
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script type="text/javascript" charset="utf8" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Knowledge Hub Sidebar JavaScript -->
     <script>
