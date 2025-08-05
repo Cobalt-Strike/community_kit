@@ -325,3 +325,9 @@ footer .content h3, .footer .content h3 a, .footer h3, .footer h3 a {
     padding: 20px;
   }
 }
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

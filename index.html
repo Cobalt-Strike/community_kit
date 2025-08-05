@@ -144,40 +144,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseCommunityHub" role="button" aria-expanded="true" aria-controls="collapseCommunityHub">
                                 <h5 class="mb-0 ">Community Hub</h5>
                                 </a>
-                                    <div class="collapse show" id="collapseCommunityHub" data-bs-parent="#sidebarAccordion">
-                                    <a class="nav-link active" href="#" data-md="docs/0_Readme_home.md">
+                                <div class="collapse show" id="collapseCommunityHub" data-bs-parent="#sidebarAccordion">
+                                    <a class="nav-link active" href="#home" data-md="docs/0_Readme_home.md">
                                         <i class="fas fa-home"></i> Home
                                     </a>
-                                    <a class="nav-link" href="#" data-md="docs/1_Security_research_environment_setup.md">
+                                    <a class="nav-link" href="#environment-setup" data-md="docs/1_Security_research_environment_setup.md">
                                         <i class="fas fa-tools"></i> Environment Setup
                                     </a>
-                                    <a class="nav-link" href="#" data-md="docs/2_DNS_C2_Dev_Setup.md">
+                                    <a class="nav-link" href="#dns-c2-dev-setup" data-md="docs/2_DNS_C2_Dev_Setup.md">
                                         <i class="fas fa-globe"></i> DNS C2 Dev Setup
                                     </a>
-                                    <a class="nav-link" href="#" data-md="docs/3_Best_practices.md">
+                                    <a class="nav-link" href="#best-practices" data-md="docs/3_Best_practices.md">
                                         <i class="fas fa-star"></i> Best Practices
                                     </a>
-                                    <a class="nav-link" href="#" data-md="docs/Advanced Topics.md">
+                                    <a class="nav-link" href="#advanced-topics" data-md="docs/Advanced Topics.md">
                                         <i class="fas fa-graduation-cap"></i> Advanced Topics
                                     </a>
-                                    <a class="nav-link" href="#" data-md="docs/Troubleshooting.md">
+                                    <a class="nav-link" href="#troubleshooting" data-md="docs/Troubleshooting.md">
                                         <i class="fas fa-wrench"></i> Troubleshooting
                                     </a>
                                 </div>
-
                                 <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseTutorials" role="button" aria-expanded="true" aria-controls="collapseCommunityHub">
                                 <h5 class="mb-0">Tutorials</h5>
                                 </a>
-                                    <div class="collapse" id="collapseTutorials" data-bs-parent="#sidebarAccordion">
-                                    <a class="nav-link" href="#" data-md="https://raw.githubusercontent.com/Cobalt-Strike/aggressor_script_examples/refs/heads/main/readme.md">
-                                    <i class="fas fa-terminal"></i> Aggressor Scripting
-                                </a>
-                                <a class="nav-link" href="#" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
-                                    <i class="fas fa-code"></i> BOF Creation
-                                </a>
-                                <a class="nav-link" href="#" data-md="docs/tutorials/Extension Development.md">
-                                    <i class="fas fa-file-code"></i> Post-Ex Dlls
-                                </a>
+                                <div class="collapse" id="collapseTutorials" data-bs-parent="#sidebarAccordion">
+                                    <a class="nav-link" href="#aggressor-scripting" data-md="https://raw.githubusercontent.com/Cobalt-Strike/aggressor_script_examples/refs/heads/main/readme.md">
+                                        <i class="fas fa-terminal"></i> Aggressor Scripting
+                                    </a>
+                                    <a class="nav-link" href="#bof-creation" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
+                                        <i class="fas fa-code"></i> BOF Creation
+                                    </a>
+                                    <a class="nav-link" href="#post-ex-dlls" data-md="docs/tutorials/Extension Development.md">
+                                        <i class="fas fa-file-code"></i> Post-Ex Dlls
+                                    </a>
                                 </div>                             
                             </nav>
                         </div>
@@ -257,13 +256,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-md]');
             const contentDiv = document.getElementById('markdown-content');
             const loadingIndicator = document.getElementById('loading-indicator');
-            
+
+            // Map hash to markdown path
+            const hashToMd = {};
+            navLinks.forEach(link => {
+                const hash = link.getAttribute('href');
+                const md = link.getAttribute('data-md');
+                if (hash && md) hashToMd[hash.replace('#','')] = md;
+            });
+
             // Function to load markdown content
             function loadMarkdown(mdPath) {
                 // Show loading indicator
                 loadingIndicator.style.display = 'block';
                 contentDiv.style.display = 'none';
-                
+
                 // Update content
                 contentDiv.innerHTML = `<zero-md src="${mdPath}"></zero-md>`;
                 
@@ -273,24 +280,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     contentDiv.style.display = 'block';
                 }, 500);
             }
-            
+
+            // Function to set active link
+            function setActive(hash) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                const activeLink = Array.from(navLinks).find(l => l.getAttribute('href') === '#' + hash);
+                if (activeLink) activeLink.classList.add('active');
+            }
+
+            // Function to open correct section
+            function openSection(hash) {
+                // Community Hub
+                const communityIds = ['home','environment-setup','dns-c2-dev-setup','best-practices','advanced-topics','troubleshooting'];
+                const tutorialsIds = ['aggressor-scripting','bof-creation','post-ex-dlls'];
+                if (communityIds.includes(hash)) {
+                    document.getElementById('collapseCommunityHub').classList.add('show');
+                    document.getElementById('collapseTutorials').classList.remove('show');
+                } else if (tutorialsIds.includes(hash)) {
+                    document.getElementById('collapseCommunityHub').classList.remove('show');
+                    document.getElementById('collapseTutorials').classList.add('show');
+                }
+            }
+
+            // Load markdown based on hash
+            function handleHashChange() {
+                let hash = window.location.hash.replace('#','');
+                if (!hash || !hashToMd[hash]) hash = 'home';
+                setActive(hash);
+                openSection(hash);
+                loadMarkdown(hashToMd[hash]);
+            }
+
+            // Initial load
+            handleHashChange();
+
+            // Listen for hash changes
+            window.addEventListener('hashchange', handleHashChange);
+
             // Add click event listeners to navigation links
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // Remove active class from all links
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Get markdown file path
-                    const mdPath = this.getAttribute('data-md');
-                    
-                    // Load the markdown content
-                    loadMarkdown(mdPath);
-                    
+                    const hash = this.getAttribute('href').replace('#','');
+                    window.location.hash = hash;
+                    // handleHashChange will be called by hashchange event
                     // Collapse menu on mobile after selection
                     if (window.innerWidth < 768) {
                         const sidebarMenu = document.getElementById('sidebarMenu');
@@ -300,7 +333,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     }
                 });
             });
-            
+
             // Handle window resize to manage sidebar behavior
             window.addEventListener('resize', function() {
                 const sidebarMenu = document.getElementById('sidebarMenu');

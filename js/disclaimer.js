@@ -52,7 +52,7 @@ $('#btnDisagree').click(()=>{
 $('#btnAgree').click(()=>{
     setCookie('acceptConsent','1',1)
     $('.toast').toast('hide')
-    window.location.href = "/community_kit";
+    window.location.href = "/community_kit/community_kit.html";
 
 })
 
