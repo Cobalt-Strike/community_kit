@@ -1,8 +1,5 @@
 # Best Practices
 
-> [!IMPORTANT]
-> This document is still in early development stage.
-
 ## Manage Cobalt Strike with Services
 
 These scripts can be used as a template to set up teamserver as a service.
