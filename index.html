@@ -5,7 +5,7 @@
 
   <!-- TrustArc tag start -->
   <script async="async" src="//consent.trustarc.com/notice?domain=helpsystems.com&c=teconsent&js=nj&text=true&gtm=1&noticeType=bb&pn=1-0&cookieLink=https://www.helpsystems.com/cookie-policy&privacypolicylink=https://www.helpsystems.com/privacy-policy" crossorigin=""></script>  <script>
-	var __dispatched__ = {}; //Map of previously dispatched preference levels
+    var __dispatched__ = {}; //Map of previously dispatched preference levels
 
     /* First step is to register with the CM API to receive callbacks when a preference update occurs. You must wait for the CM API (PrivacyManagerAPI object) to exist on the page before registering.
     */
@@ -43,7 +43,7 @@
                 });
             }
         } catch (xx) {
-  		    /** not a cm api message **/
+            /** not a cm api message **/
         }
     });
   </script>
@@ -75,6 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:description" content="Cobalt Strike Community Kit">
     <meta name="twitter:image" content="https://github.com/Cobalt-Strike/community_kit/raw/main/community_kit.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     
     <title>Cobalt Strike Community Hub</title>
 
@@ -184,10 +185,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <a class="nav-link" href="#bof-creation" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
                                         <i class="fas fa-code"></i> BOF Creation
                                     </a>
+                                    <!--TODO
                                     <a class="nav-link" href="#post-ex-dlls" data-md="docs/tutorials/Extension Development.md">
                                         <i class="fas fa-file-code"></i> Post-Ex Dlls
                                     </a>
-                                </div>                             
+                                    -->
+                                    <a class="nav-link" href="#teamserver-prop" data-md="https://raw.githubusercontent.com/Cobalt-Strike/teamserver-prop/refs/heads/main/README.md">
+                                        <i class="fas fa-tasks"></i> Teamserver.Prop Configuration
+                                    </a>
+                                </div>
                             </nav>
                         </div>
                     </div>
@@ -261,98 +267,119 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Knowledge Hub Sidebar JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all navigation links with data-md attribute
-            const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-md]');
-            const contentDiv = document.getElementById('markdown-content');
-            const loadingIndicator = document.getElementById('loading-indicator');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all navigation links with data-md attribute
+        const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-md]');
+        const contentDiv = document.getElementById('markdown-content');
+        const loadingIndicator = document.getElementById('loading-indicator');
 
-            // Map hash to markdown path
-            const hashToMd = {};
-            navLinks.forEach(link => {
-                const hash = link.getAttribute('href');
-                const md = link.getAttribute('data-md');
-                if (hash && md) hashToMd[hash.replace('#','')] = md;
-            });
+        // Map hash to markdown path
+        const hashToMd = {};
+        navLinks.forEach(link => {
+            const hash = link.getAttribute('href');
+            const md = link.getAttribute('data-md');
+            if (hash && md) hashToMd[hash.replace('#','')] = md;
+        });
 
-            // Function to load markdown content
-            function loadMarkdown(mdPath) {
-                // Show loading indicator
-                loadingIndicator.style.display = 'block';
-                contentDiv.style.display = 'none';
+        // Function to load markdown content
+        function loadMarkdown(mdPath, callback) {
+            loadingIndicator.style.display = 'block';
+            contentDiv.style.display = 'none';
+            contentDiv.innerHTML = `<zero-md src="${mdPath}"></zero-md>`;
+            setTimeout(() => {
+                loadingIndicator.style.display = 'none';
+                contentDiv.style.display = 'block';
+                if (callback) callback();
+            }, 500);
+        }
 
-                // Update content
-                contentDiv.innerHTML = `<zero-md src="${mdPath}"></zero-md>`;
+        // Function to set active link
+        function setActive(hash) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const activeLink = Array.from(navLinks).find(l => l.getAttribute('href') === '#' + hash);
+            if (activeLink) activeLink.classList.add('active');
+        }
 
-                // Simulate loading delay and hide indicator
-                setTimeout(() => {
-                    loadingIndicator.style.display = 'none';
-                    contentDiv.style.display = 'block';
-                }, 500);
-            }
-
-            // Function to set active link
-            function setActive(hash) {
-                navLinks.forEach(l => l.classList.remove('active'));
-                const activeLink = Array.from(navLinks).find(l => l.getAttribute('href') === '#' + hash);
-                if (activeLink) activeLink.classList.add('active');
-            }
-
-            // Function to open correct section
-            function openSection(hash) {
-                // Community Hub
-                const communityIds = ['home','environment-setup','dns-c2-dev-setup','best-practices','advanced-topics','troubleshooting'];
-                const tutorialsIds = ['aggressor-scripting','bof-creation','post-ex-dlls'];
-                if (communityIds.includes(hash)) {
-                    document.getElementById('collapseCommunityHub').classList.add('show');
-                    document.getElementById('collapseTutorials').classList.remove('show');
-                } else if (tutorialsIds.includes(hash)) {
-                    document.getElementById('collapseCommunityHub').classList.remove('show');
-                    document.getElementById('collapseTutorials').classList.add('show');
+        // Function to open correct section
+        function openSection(hash) {
+            // Find the nav-link with the matching hash
+            const activeLink = Array.from(navLinks).find(l => l.getAttribute('href') === '#' + hash);
+            if (!activeLink) return;
+            // Find the closest collapsible parent section
+            const allSections = document.querySelectorAll('#sidebarAccordion .collapse');
+            let parentSection = activeLink.closest('.collapse');
+            // Open the parent section and close others
+            allSections.forEach(section => {
+                if (section === parentSection) {
+                    section.classList.add('show');
+                } else {
+                    section.classList.remove('show');
                 }
-            }
+            });
+        }
 
-            // Load markdown based on hash
-            function handleHashChange() {
-                let hash = window.location.hash.replace('#','');
-                if (!hash || !hashToMd[hash]) hash = 'home';
+        // Scroll to anchor inside markdown
+        function scrollToAnchor(anchor) {
+            // Wait for zero-md to render
+            setTimeout(() => {
+                const zeroMd = contentDiv.querySelector('zero-md');
+                if (zeroMd) {
+                    const shadow = zeroMd.shadowRoot;
+                    if (shadow) {
+                        const el = shadow.getElementById(anchor) || shadow.querySelector(`[id='${anchor}']`);
+                        if (el) {
+                            el.scrollIntoView({behavior: 'smooth'});
+                        }
+                    }
+                }
+            }, 600);
+        }
+
+        // Load markdown based on hash
+        function handleHashChange() {
+            let hash = window.location.hash.replace('#','');
+            if (!hash) hash = 'home';
+            // If hash matches a sidebar menu item, load markdown
+            if (hashToMd[hash]) {
                 setActive(hash);
                 openSection(hash);
                 loadMarkdown(hashToMd[hash]);
+            } else {
+                // Otherwise, treat as anchor and scroll inside markdown
+                scrollToAnchor(hash);
             }
+        }
 
-            // Initial load
-            handleHashChange();
+        // Initial load
+        handleHashChange();
 
-            // Listen for hash changes
-            window.addEventListener('hashchange', handleHashChange);
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
 
-            // Add click event listeners to navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const hash = this.getAttribute('href').replace('#','');
-                    window.location.hash = hash;
-                    // handleHashChange will be called by hashchange event
-                    // Collapse menu on mobile after selection
-                    if (window.innerWidth < 768) {
-                        const sidebarMenu = document.getElementById('sidebarMenu');
-                        if (sidebarMenu.classList.contains('show')) {
-                            $('#sidebarMenu').collapse('hide');
-                        }
+        // Add click event listeners to navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const hash = this.getAttribute('href').replace('#','');
+                window.location.hash = hash;
+                // handleHashChange will be called by hashchange event
+                if (window.innerWidth < 768) {
+                    const sidebarMenu = document.getElementById('sidebarMenu');
+                    if (sidebarMenu.classList.contains('show')) {
+                        $('#sidebarMenu').collapse('hide');
                     }
-                });
-            });
-
-            // Handle window resize to manage sidebar behavior
-            window.addEventListener('resize', function() {
-                const sidebarMenu = document.getElementById('sidebarMenu');
-                if (window.innerWidth >= 768) {
-                    sidebarMenu.classList.add('show');
                 }
             });
         });
-    </script>    
+
+        window.addEventListener('resize', function() {
+            const sidebarMenu = document.getElementById('sidebarMenu');
+            if (window.innerWidth >= 768) {
+                sidebarMenu.classList.add('show');
+            }
+        });
+    });
+</script>    
 
 </body>
 

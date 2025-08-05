@@ -129,7 +129,10 @@ With the latest builds of Windows, you can toggle Real-time protection to off, b
 
 9. Reboot Windows
 
-The steps from 3 to 9, can be automated with the following Powershell Script:
+<details>
+
+<summary>The steps from 3 to 9, can be automated with the following Powershell Script</summary>
+
 
 ```powershell
 # Must be run as Administrator
@@ -211,6 +214,7 @@ if ($choice -match '^[Yy]$') {
 }
 
 ```
+</details>
 
 ## Install Cobalt Strike
 

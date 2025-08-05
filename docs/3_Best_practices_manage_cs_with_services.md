@@ -1,12 +1,10 @@
-# Best Practices
-
-## Manage Cobalt Strike with Services
+# Manage Cobalt Strike with Services
 
 These scripts can be used as a template to set up teamserver as a service.
 
 These scripts have been tested on ```Ubuntu``` server, and will need to be adjusted based on your use case.
 
-### Configuration Steps
+## Configuration Steps
 
 1. Update the service files to match your environment.
     - ```teamserver.service```
@@ -21,7 +19,7 @@ These scripts have been tested on ```Ubuntu``` server, and will need to be adjus
     systemctl start teamserver.service
     ```
 
-### Team Server Service
+## Team Server Service
 
 Update the settings to match your environment.
 
@@ -44,3 +42,5 @@ ExecStart=<PATH TO COBALT STRIKE>/cobaltstrike/server/teamserver <TEAM SERVER IP
 [Install]
 WantedBy=multi-user.target
 ```
+
+[Read More...](https://www.cobaltstrike.com/blog/manage-cobalt-strike-with-services)
