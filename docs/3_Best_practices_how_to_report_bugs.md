@@ -40,8 +40,8 @@ The ```jmap``` tool that ships with Java makes this easy. The preferred output c
 
 If this returns an error, try: ```jmap –F –histo <PID>```. These commands will dump a full summary of Java objects in memory. If you provide the team with this information for both your team server and Cobalt Strike client—it will help us to track down memory leaks or memory-related performance issues.
 
-[Read More...](https://www.cobaltstrike.com/blog/a-quick-guide-to-bug-reports)
-
 ## Send the report
 
 Follow the instructions provided in the [Cobalt Strike Support page](https://www.cobaltstrike.com/support).
+
+[Read More...](https://www.cobaltstrike.com/blog/a-quick-guide-to-bug-reports)

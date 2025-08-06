@@ -13,7 +13,7 @@ Setting up DNS beacons in a Windows 10 development environment with Cobalt Strik
 
 First, stop the ```systemd-resolved``` service on WSL to free port ```53``` for the Team Server:
 
-```bash
+```text
 sudo systemctl stop systemd-resolved
 ```
 

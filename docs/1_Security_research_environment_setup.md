@@ -6,6 +6,7 @@
 
 - A **Windows 11** machine (without a security solution)
 - [Python 3](https://www.python.org/downloads/)
+- [Wireshark](https://www.wireshark.org/)
 
 ### Visual Studio Installation
 
