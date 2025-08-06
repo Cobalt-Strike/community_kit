@@ -2,21 +2,27 @@
 
 These scripts can be used as a template to set up teamserver as a service.
 
-These scripts have been tested on ```Ubuntu``` server, and will need to be adjusted based on your use case.
+> [!NOTE]
+> These scripts have been tested on ```Ubuntu``` server, and will need to be adjusted based on your use case.
 
 ## Configuration Steps
 
-1. Update the service files to match your environment.
+1. Update the service file to match your environment.
     - ```teamserver.service```
-2. Copy the service files to your teamserver
+2. Copy the service file to your teamserver
     - ```/etc/systemd/system/teamserver.service```
-3. Register the new services
+3. Register the new service
     ```bash
     systemctl daemon-reload
     ```
-4. Start the services
+4. Start the service
     ```bash
     systemctl start teamserver.service
+    ```
+
+5. Check the status of the service
+    ```bash
+    systemctl status teamserver.service
     ```
 
 ## Team Server Service
