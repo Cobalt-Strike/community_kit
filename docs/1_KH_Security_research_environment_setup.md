@@ -1,6 +1,12 @@
 # Security Research Environment Setup
 
-{% include wistia.html id=”j0kkf4og6r” %}
+## Video Walkthrough
+
+<center>
+    <video width="720"  controls>
+    <source src="https://embed-ssl.wistia.com/deliveries/e35102a95bde618c6787006bd3f69b04a3c22e6c/myvideo.mp4" type="video/mp4">
+    </video>
+</center>
 
 ## Install Requirements
 
@@ -8,6 +14,7 @@
 
 - A **Windows 11** machine (without a security solution)
 - [Python 3](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/downloads/win)
 - [Wireshark](https://www.wireshark.org/)
 
 ### Visual Studio Installation
