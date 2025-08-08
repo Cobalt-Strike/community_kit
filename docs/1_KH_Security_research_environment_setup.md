@@ -1,5 +1,7 @@
 # Security Research Environment Setup
 
+{% include wistia.html id=”j0kkf4og6r” %}
+
 ## Install Requirements
 
 ### Prerequisites
