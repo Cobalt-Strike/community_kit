@@ -3,8 +3,8 @@
 ## Video Walkthrough
 
 <center>
-    <video width="720"  controls>
-    <source src="https://embed-ssl.wistia.com/deliveries/e35102a95bde618c6787006bd3f69b04a3c22e6c/myvideo.mp4" type="video/mp4">
+    <video width="720" heigth="480" crossorigin="anonymous" aria-label="Security Research Environment Setup Video Walkthrough" x-webkit-airplay="allow" playsinline="" controls controlslist="nodownload">
+    <source src="https://embed-ssl.wistia.com/deliveries/da77a2884c07f030cde3280947a82d090526f1f6/9fpmwjill3.mp4" type="video/mp4">
     </video>
 </center>
 
