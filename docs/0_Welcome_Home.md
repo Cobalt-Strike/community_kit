@@ -7,4 +7,6 @@ Whether you're modifying configurations or building custom implementations, you 
 <center><img src="docs/imgs/CustomizationOptions.png" alt="Customization Options" width="70%"/><br/><br/></center>
 
 
-One thing that sets [Cobalt Strike](https://www.cobaltstrike.com) apart from other C2 frameworks is its user community – not only its size, but also its level of engagement. Contribute to the Community Hub! 
+One thing that sets [Cobalt Strike](https://www.cobaltstrike.com) apart from other C2 frameworks is its user community – not only its size, but also its level of engagement. Contribute to the Community Hub!
+
+Together, we harness collective expertise to provide you with cutting-edge intelligence and best-practices for your engagements and research.
