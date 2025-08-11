@@ -139,13 +139,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <!-- Collapsible menu -->
                         <div class="collapse d-md-block" id="sidebarMenu">
                             <nav class="nav flex-column accordion" id="sidebarAccordion">
-                                <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseCommunityHub" role="button" aria-expanded="true" aria-controls="collapseCommunityHub">
-                                <h5 class="mb-0 ">Knowledge Hub</h5>
+                                <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseWelcome" role="button" aria-expanded="true" aria-controls="collapseWelcome">
+                                <h5 class="mb-0 ">Welcome!</h5>
                                 </a>
-                                <div class="collapse show" id="collapseCommunityHub" data-bs-parent="#sidebarAccordion">
-                                    <a class="nav-link active" href="#home" data-md="docs/1_KH_Home.md">
+                                <div class="collapse show" id="collapseWelcome" data-bs-parent="#sidebarAccordion">
+                                    <a class="nav-link active" href="#home" data-md="docs/0_Welcome_Home.md">
                                         <i class="fas fa-home"></i> Home
                                     </a>
+                                    <a class="nav-link" href="#faq" data-md="docs/0_Welcome_FAQ.md">
+                                        <i class="fas fa-question"></i> FAQ
+                                    </a>
+                                </div>
+                                <a class="nav-link text-light" data-bs-toggle="collapse" href="#collapseKnowledgeHub" role="button" aria-expanded="true" aria-controls="collapseKnowledgeHub">
+                                <h5 class="mb-0 ">Knowledge Hub</h5>
+                                </a>
+                                <div class="collapse" id="collapseKnowledgeHub" data-bs-parent="#sidebarAccordion">
                                     <a class="nav-link" href="#environment-setup" data-md="docs/1_KH_Security_research_environment_setup.md">
                                         <i class="fas fa-tools"></i> Environment Setup
                                     </a>
@@ -215,7 +223,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         
                         <!-- Content area -->
                         <div id="markdown-content">
-                            <zero-md src="docs/1_KH_Home.md"></zero-md>
+                            <zero-md src="docs/0_Welcome_Home.md"></zero-md>
                         </div>
                     </div>
                     <footer class="bg-footer-1">
