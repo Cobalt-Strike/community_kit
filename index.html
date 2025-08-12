@@ -131,6 +131,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <!-- Left Column - Collapsible Menu -->
                 <div class="col-md-3 col-lg-2" id="sidebar">
                     <div class="sidebar-sticky">
+                        <!-- Sidebar Search Box -->
+                        <div class="mb-3">
+                            <input type="text" id="sidebarSearch" class="form-control" placeholder="Search">
+                        </div>
                         <!-- Toggle button for mobile -->
                         <button class="btn btn-outline-light d-md-none mb-3" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fas fa-bars"></i> Menu
@@ -188,7 +192,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </a>
                                 <div class="collapse" id="collapseTutorials" data-bs-parent="#sidebarAccordion">
                                     <a class="nav-link" href="#aggressor-scripting" data-md="https://raw.githubusercontent.com/Cobalt-Strike/aggressor_script_examples/refs/heads/main/readme.md">
-                                        <i class="fas fa-terminal"></i> Aggressor Scripting
+                                        <i class="fas fa-terminal"></i> Aggressor Script
                                     </a>
                                     <a class="nav-link" href="#bof-creation" data-md="https://raw.githubusercontent.com/Cobalt-Strike/bof-vs/refs/heads/main/README.md">
                                         <i class="fas fa-code"></i> BOF Creation
@@ -279,6 +283,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Knowledge Hub Sidebar JavaScript -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Sidebar search filter
+        const sidebarSearch = document.getElementById('sidebarSearch');
+        sidebarSearch.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            // Get all collapsible sections
+            const sections = document.querySelectorAll('#sidebarAccordion > a[data-bs-toggle="collapse"]');
+            sections.forEach(sectionHeader => {
+                const sectionId = sectionHeader.getAttribute('href');
+                const section = document.querySelector(sectionId);
+                let anyVisible = false;
+                // Show/hide menu items in this section
+                if (section) {
+                    const links = section.querySelectorAll('.nav-link[data-md]');
+                    links.forEach(link => {
+                        const text = link.textContent.toLowerCase();
+                        if (text.includes(query)) {
+                            link.style.display = '';
+                            anyVisible = true;
+                        } else {
+                            link.style.display = 'none';
+                        }
+                    });
+                }
+                // Show section header if any child is visible or header matches
+                const headerText = sectionHeader.textContent.toLowerCase();
+                if (headerText.includes(query) || anyVisible) {
+                    sectionHeader.style.display = '';
+                    if (section) {
+                        section.style.display = '';
+                        // Expand section if any child is visible
+                        if (anyVisible) {
+                            section.classList.add('show');
+                        } else {
+                            section.classList.remove('show');
+                        }
+                    }
+                } else {
+                    sectionHeader.style.display = 'none';
+                    if (section) section.style.display = 'none';
+                }
+            });
+        });
         // Get all navigation links with data-md attribute
         const navLinks = document.querySelectorAll('#sidebarMenu .nav-link[data-md]');
         const contentDiv = document.getElementById('markdown-content');
@@ -373,6 +419,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 e.preventDefault();
                 const hash = this.getAttribute('href').replace('#','');
                 window.location.hash = hash;
+                // Clear sidebar search and reset filter
+                if (sidebarSearch) {
+                    sidebarSearch.value = '';
+                    // Trigger input event to reset filtering
+                    sidebarSearch.dispatchEvent(new Event('input'));
+                }
                 // handleHashChange will be called by hashchange event
                 if (window.innerWidth < 768) {
                     const sidebarMenu = document.getElementById('sidebarMenu');

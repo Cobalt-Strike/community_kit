@@ -136,3 +136,11 @@ Open Wireshark on the Windows Development Machine:
 - Filter: ```ip.dst==<Team Server IP from the WSL Linux server> and tcp.port==443```
 
     ![DoH Beacon Traffic](imgs/DoH_traffic.png)
+
+## Demo
+
+<p align="center">
+    <video width="720" heigth="480" crossorigin="anonymous" aria-label="DoH Demo Walkthrough" x-webkit-airplay="allow" playsinline="" controls controlslist="nodownload">
+    <source src="https://embed-ssl.wistia.com/deliveries/5a3cf04996bfc41a018163ae3d7781bb7d9ff237/6d4blp5l0q.mp4" type="video/mp4">
+    </video>
+</p>
