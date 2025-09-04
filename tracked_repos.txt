@@ -121,3 +121,4 @@ BOF, The-Z-Labs/bof-launcher
 BOF, Mr-Un1k0d3r/BOFCode
 Aggressor, x-stp/beacon-jukebox
 External-C2, cobalt-strike/External-C2
+BOF, Meckazin/ChromeKatz
