@@ -1,8 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-
-
   <!-- TrustArc tag start -->
   <script async="async" src="//consent.trustarc.com/notice?domain=helpsystems.com&c=teconsent&js=nj&text=true&gtm=1&noticeType=bb&pn=1-0&cookieLink=https://www.helpsystems.com/cookie-policy&privacypolicylink=https://www.helpsystems.com/privacy-policy" crossorigin=""></script>  <script>
 	var __dispatched__ = {}; //Map of previously dispatched preference levels
@@ -79,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:title" content="Community Kit">
     <meta name="twitter:description" content="Cobalt Strike Community Kit">
     <meta name="twitter:image" content="https://github.com/Cobalt-Strike/community_kit/raw/main/community_kit.png">
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
     
     <title>Cobalt Strike Community Kit</title>
 
@@ -94,28 +92,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div>
-        <nav class="navbar navbar-expand-md shadow-sm bg-fortra mh-head" id="fortra-header">
-            <div class="container">
-                <a class="navbar-brand" href="https://www.fortra.com" target="_blank"> 
-                    <img width="150" height="24" src="https://static.fortra.com/fortra-global-assets/fortra-logo-full.svg?l=1990373699" alt="Fortra" class="img-fluid">
-                </a>
-                <div class="collapse navbar-collapse flex-column" id="my-menu">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"> <a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com" target="_blank">cobaltstrike.com</a> </li>
-                        <li class="nav-item"> <a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com/contact" target="_blank">Contact Us</a> </li>
-                        <li class="nav-item"> <a class="nav-link text-nowrap fg-cream" href="https://github.com/cobalt-strike" target="_blank"><i class="fab fa-github fa-lg"></i></a> </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-md shadow-sm bg-fortra mh-head menubar sticky-top" id="fortra-header">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.fortra.com" target="_blank"> 
+                <img width="150" height="24" src="https://static.fortra.com/fortra-global-assets/fortra-logo-full.svg?l=1990373699" alt="Fortra" class="img-fluid">
+            </a>
+            <div class="collapse navbar-collapse" id="my-menu">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com" target="_blank">cobaltstrike.com</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap fg-cream" href="https://cobaltstrike.com/contact" target="_blank">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-nowrap fg-cream" href="https://github.com/cobalt-strike" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
 
         <div class="container">
 
             <p class="lead">
-                <h1 class="display-3"><span style="color:#77ECC2;">Cobalt Strike</span><br/>Community Kit</h1>
+                <h1 class="display-3"><span style="color:#77ECC2;">Cobalt Strike</span> Community Kit</h1>
                 <a href="https://cobaltstrike.com" target="_blank">Cobalt Strike</a> is a post-exploitation framework designed to be extended and customized by the user community. Several excellent tools and scripts have been written and published, but they can be challenging to locate. Community Kit is a central repository of extensions written by the user community to extend the capabilities of Cobalt Strike. The Cobalt Strike team acts as the curator and provides this kit to showcase this fantastic work.    
             </p>
 
@@ -204,12 +202,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 </div>
 
-                <!-- Submit Request Button -->
-                <div class="p-2">
-                    <a href="submit_request.html" class="btn btn-success">Submit a project</a>
-                    
-                </div>
+                <!-- Submit Request Modal -->
+                 <div class="p-2">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#submitRequestModal" id="openSubmitRequestModalButton">
+                    Submit a Tool / Project
+                    </button>
+                    <div class="modal fade" id="submitRequestModal" tabindex="-1" role="dialog" aria-labelledby="submitRequestModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" style="max-width: fit-content;" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="submitRequestModalLongTitle">
+                                    Submit a Request</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid" style="min-height: 80vh;min-width: 50vw;display: flex;" id="submitRequestFormContainer">
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeSubmitRequestModalButton">Close</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
                 
         </div>
@@ -256,44 +276,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </tr>
                 </tfoot>
             </table>
-
-
-            <footer class="bg-footer-1">
-	<div class="container">
-		<div class="row copyright">
-			<div class="col">
-				<section class="row region region-footer-bottom">
-					<div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
-						<div class="content">
-							<div class="col">
-								<h3 class="d-inline-block">
-									<a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
-								</h3>
-                                <h3 class="d-inline-block">
-                                    <div id="teconsent"></div>
-                                </h3>
-								<h3 class="d-inline-block">
-									<a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
-								</h3>
-								<h3 class="d-inline-block">
-									<a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
-								</h3>
-								<h3 class="d-inline-block">
-									<a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
-								</h3>
-								<h3 class="d-inline-block">
-									<a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
-								</h3>
-                        Copyright © Fortra, LLC and its group of companies. Fortra®, the Fortra® logos, and other identified marks are proprietary trademarks of Fortra, LLC.
-                    </div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-</footer>
         </div>
+
+        <footer class="bg-footer-1">
+                <div class="container">
+                    <div class="row copyright">
+                        <div class="col">
+                            <section class="row region region-footer-bottom">
+                                <div id="block-footercopyright-2" class="block block-block-content block-block-contentcc7dac8f-10b8-4d21-996d-c6894e7edcf0">
+                                    <div class="content">
+                                        <div class="col">
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/privacy-policy" target="_blank">Privacy Policy</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <div id="teconsent"></div>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/cookie-policy" target="_blank">Cookie Policy</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.fortra.com/impressum" target="_blank">Impressum</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://cobaltstrike.com/help-corp-compliance-ethics" target="_blank">Corporate Compliance & Ethics</a>
+                                            </h3>
+                                            <h3 class="d-inline-block">
+                                                <a href="https://www.cobaltstrike.com/blog" target="_blank">Blog</a>
+                                            </h3>
+                                    Copyright &copy; Fortra, LLC and its group of companies. Fortra&reg;, the Fortra&reg; logos, and other identified marks are proprietary trademarks of Fortra, LLC.
+                                </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </footer>
                
         
         <!-- Consent and Disclaimer Warning Toast -->
@@ -337,7 +356,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="js/disclaimer.js"></script>
     <script src="js/cckit_table.js?cb=20221103"></script>
 
+    <script>
+        const modal = document.getElementById('submitRequestModal');
+        const openBtn = document.getElementById('openSubmitRequestModalButton');
+        const closeBtn = document.getElementById('closeSubmitRequestModalButton');
+        const container = document.getElementById('submitRequestFormContainer');
 
+        openBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+
+        // Insert iframe only when modal is shown
+        container.innerHTML = `
+            <iframe width="100%" 
+            src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=O-KBygk17kWpmD40as8nTTC_QN-HhSxLmcseOhpl0n9UQjRGUU1NVlAySTVEUlUwWUVTTTVSMUwyWC4u" 
+            frameborder="0" 
+            marginwidth="0" 
+            marginheight="0" 
+            style="border: none; max-width:100%; min-width: 50vh; min-height: 80vh;" 
+            
+            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+            </iframe>`;
+        });
+
+        closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        container.innerHTML = ''; // remove iframe when closing
+        });
+
+        // Optional: close modal when clicking outside content
+        window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            container.innerHTML = '';
+        }
+        });
+
+    </script>
      
 
 </body>
