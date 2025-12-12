@@ -129,3 +129,4 @@ BOF, NtDallas/BOF_Spawn
 BOF, NtDallas/Draugr
 UDRL, CodeXTF2/CustomC2ChannelTemplate
 BOF, CodeXTF2/WebcamBOF
+BOF, nickvourd/COM-Hunter
