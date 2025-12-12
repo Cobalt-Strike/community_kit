@@ -125,3 +125,5 @@ BOF, Meckazin/ChromeKatz
 UDC2, cobalt-strike/udc2-vs
 UDC2, cobalt-strike/icmp-udc2
 REST API, cobalt-strike/py2rest
+BOF, NtDallas/BOF_Spawn
+BOF, NtDallas/Draugr
