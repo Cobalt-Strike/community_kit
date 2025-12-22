@@ -130,3 +130,6 @@ BOF, NtDallas/Draugr
 UDRL, CodeXTF2/CustomC2ChannelTemplate
 BOF, CodeXTF2/WebcamBOF
 BOF, nickvourd/COM-Hunter
+Aggressor, cobalt-strike/sleep2rest
+REST API, cobalt-strike/cobaltstrike-web-client
+REST API, cobalt-strike/cobaltstrike-mcp-server
