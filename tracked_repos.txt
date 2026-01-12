@@ -133,3 +133,4 @@ BOF, nickvourd/COM-Hunter
 Aggressor, cobalt-strike/sleep2rest
 REST API, cobalt-strike/cobaltstrike-web-client
 REST API, cobalt-strike/cobaltstrike-mcp-server
+BOF, CodeXTF2/bof_template
