@@ -135,3 +135,9 @@ REST API, cobalt-strike/cobaltstrike-web-client
 REST API, cobalt-strike/cobaltstrike-mcp-server
 BOF, CodeXTF2/bof_template
 BOF, MWR-CyberSec/VeeamDumper-BOF
+BOF, incursi0n/GodPotatoBOF
+BOF, EricEsquivel/Inline-EA
+Aggressor, savsanta/numbreaker
+BOF, leftp/RegPersist
+BOF, incursi0n/ClipboardStealBOF
+BOF, RainbowDynamix/GhostKatz
