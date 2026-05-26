@@ -141,3 +141,7 @@ Aggressor, savsanta/numbreaker
 BOF, leftp/RegPersist
 BOF, incursi0n/ClipboardStealBOF
 BOF, RainbowDynamix/GhostKatz
+BOF, 0xbngs/WMIPersistKit
+Aggressor, shellkraft/Ledger
+BOF, nettitude/CLR-Stomp
+BOF, KingOfTheNOPs/cookie-monster
