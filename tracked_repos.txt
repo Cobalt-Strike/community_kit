@@ -18,7 +18,7 @@ BOF, cobalt-strike/ZeroLogon-BOF
 Kit, cobalt-strike/ElevateKit
 Malleable-C2, FortyNorthSecurity/C2concealer
 Aggressor, FortyNorthSecurity/AggressorAssessor
-Mallealbe-C2, threatexpress/random_c2_profile
+Malleable-C2, threatexpress/random_c2_profile
 Malleable-C2, threatexpress/cs2modrewrite
 Malleable-C2, threatexpress/malleable-c2
 Aggressor, threatexpress/cobaltstrike_payload_generator
