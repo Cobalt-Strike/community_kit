@@ -148,3 +148,5 @@ BOF, KingOfTheNOPs/cookie-monster
 Malleable-C2, D00Movenok/BounceBack
 BOF, nmht3t/RawHive
 Reports, nickvourd/CS-PDF2EXCEL
+BOF, brmkit/toastnotify-bof
+UDC2, nmht3t/OneDrive-UDC2
